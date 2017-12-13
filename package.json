@@ -18,7 +18,16 @@
   "homepage": "https://github.com/WeebleWobb/BarbaConBigote#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.1.0",
+    "gulp-htmlclean": "^2.7.16",
     "gulp-imagemin": "^4.0.0",
-    "gulp-newer": "^1.3.0"
+    "gulp-newer": "^1.3.0",
+    "gulp-purify-css": "^0.1.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "purify-css": "^1.2.5",
+    "purifycss": "^1.2.6"
   }
 }
