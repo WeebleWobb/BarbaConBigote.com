@@ -1,6 +1,292 @@
 /*!
- * Barba con Bigote 1.0
- * @license MIT licensed
- *
- * Copyright (C) 2017 barbaconbigote.com - A project by Juan D. Bolaños
- */
+	* Barba con Bigote v1.0
+	* @license MIT licensed
+	*
+	* Copyright (C) 2017 barbaconbigote.com - A project by Juan D. Bolaños
+*/
+
+/* ===================================================================
+	01. Global
+=================================================================== */
+
+a {
+	color: #f5a800;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #4f2c1f;
+}
+
+.color-brown {
+	color: #4f2c1f;
+}
+
+.color-charcoal {
+	color: #323232;
+}
+
+.color-grey {
+	color: #efefef;
+}
+
+.color-orange {
+	color: #f5a800;
+}
+
+.color-red {
+	color: #d54935;
+}
+
+hr {
+	border-color: #4f2c1f;
+}
+
+.is_home {
+	background-color: #d54935;
+}
+
+.is_not_home {
+	background-color: #efefef;
+}
+
+#logo {
+	max-width: 120px;
+	z-index: 999;
+}
+
+/* ===================================================================
+	02. Navigation
+=================================================================== */
+
+header {
+	position: relative;
+	height: 93px;
+}
+
+.main-nav {
+	background-color: #d54935;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 998;
+	transition: transform .35s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+	transform: translate3d(100%, 0, 0);
+	-ms-transform: translate3d(100%, 0, 0);
+	-webkit-transform: translate3d(100%, 0, 0);
+	-o-transform: translate3d(100%, 0, 0);
+}
+
+.main-nav.is-open {
+	transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+}
+
+.main-nav .contact {
+	padding: 2em 1em;
+	transition: transform .25s cubic-bezier(0.05, 1.04, 0.72, 0.98), opacity .25s ease-in;
+	opacity: 0;
+	transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	-webkit-transform: translateY(20px);
+	-o-transform: translateY(20px);
+}
+
+.main-nav .contact.is-open {
+	transition-delay: .625s;
+	opacity: 1;
+	transform: translateY(0);
+	-ms-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-o-transform: translateY(0);
+}
+
+.main-nav .nav {
+	margin-top: 7em;
+}
+
+.main-nav .nav-item {
+	transition: transform .25s cubic-bezier(0.05, 1.04, 0.72, 0.98), opacity .25s ease-in;
+	opacity: 0;
+	transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	-webkit-transform: translateY(20px);
+	-o-transform: translateY(20px);
+}
+
+.main-nav .nav-item.is-open {
+	opacity: 1;
+	transform: translateY(0);
+	-ms-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-o-transform: translateY(0);
+}
+
+.main-nav .nav-link {
+	text-decoration: none;
+	font-size: 1.75em;
+	font-weight: 700;
+	color: #efefef;
+	transition: color .125s ease-in;
+	display: inline-block;
+	width: auto;
+}
+
+.main-nav .nav-link:hover {
+	color: #f5a800;
+}
+
+.main-nav .nav-item.is-open:nth-child(1n) {
+	transition-delay: .125s;
+}
+
+.main-nav .nav-item.is-open:nth-child(2n) {
+	transition-delay: .25s;
+}
+
+.main-nav .nav-item.is-open:nth-child(3n) {
+	transition-delay: .375s;
+}
+
+.main-nav .nav-item.is-open:nth-child(4n) {
+	transition-delay: .5s;
+}
+
+.menu {
+	float: right;
+	cursor: pointer;
+}
+
+.menu .line {
+	width: 40px;
+	height: 4px;
+	background-color: #f5a800;
+	margin: 8px 0 ;
+	transition: transform .25s ease;
+	transform: rotate(0deg) translate(0, 0);
+	-ms-transform: rotate(0deg) translate(0, 0);
+	-webkit-transform: rotate(0deg) translate(0, 0);
+	-o-transform: rotate(0deg) translate(0, 0);
+	transform-origin: center center;
+}
+
+.menu.is-open .line:nth-child(1n) {
+	transform: rotate(45deg) translate(2px, 10px);
+	-ms-transform: rotate(45deg) translate(2px, 10px);
+	-webkit-transform: rotate(45deg) translate(2px, 10px);
+	-o-transform: rotate(45deg) translate(2px, 10px);
+}
+
+.menu.is-open .line:nth-child(2n) {
+	display: none;
+}
+
+.menu.is-open .line:nth-child(3n) {
+	transform: rotate(-45deg) translate(-2px, -8px);
+	-ms-transform: rotate(-45deg) translate(-2px, -8px);
+	-webkit-transform: rotate(-45deg) translate(-2px, -8px);
+	-o-transform: rotate(-45deg) translate(-2px, -8px);
+}
+
+#navBar {
+	position: absolute;
+	z-index: 999;
+	left: 0;
+	top: 0;
+}
+
+/* ===================================================================
+	03. Typography
+=================================================================== */
+
+body {
+	font-size: 100%;
+	font-family: 'Signika Negative', sans-serif;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 2.625em;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 2.25em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: 1.625em;
+	font-weight: 600;
+}
+
+h5 {
+	font-size: 1.3125em;
+	font-weight: 700;
+}
+
+h6 {
+	font-size: 1.125em;
+	font-weight: 600;
+}
+
+p {
+	font-size: .875em;
+	font-weight: 400;
+}
+
+/* ===================================================================
+	04. Home
+=================================================================== */
+
+.aspot-content {
+	text-shadow: 0 0 5px rgba(79,44,31, .4);
+	padding: 2em 0;
+}
+
+#featuredWork {
+	box-shadow: 0 0 25px rgba(79, 44, 31, .4);
+	margin-bottom: 4em;
+}
+
+#featuredWork .carousel-caption {
+	position: relative;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #efefef;
+	text-align: left;
+	padding: .75em 1em;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#featuredWork .carousel-caption p {
+	margin-bottom: 0;
+}
+
+#featuredWork .carousel-indicators {
+	bottom: -40px;
+}
+
+#featuredWork .carousel-indicators li {
+	background-color: #f5a800;
+	width: 11px;
+	height: 11px;
+	border-radius: 100%;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+#featuredWork .carousel-indicators li.active {
+	background-color: #fff;
+}
