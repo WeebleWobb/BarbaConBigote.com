@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 
 	// --------------------- 01. Navigation --------------------- //
-
 	$('#menu').on('click', function() {
 
 		var $nav = $('#mainNav')
@@ -27,6 +26,13 @@ $(document).ready(function() {
 		} else {
 			$body.css({'overflow': 'auto'});
 		}
+	});
+
+	// --------------------- 02. Work and Blog --------------------- //
+	$('.work-img, .post-img').hover(function() {
+
+		$(this).toggleClass('hover');
+
 	});
 
 
