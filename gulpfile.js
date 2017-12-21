@@ -10,7 +10,10 @@ var
   	stripdebug = require('gulp-strip-debug'),
   	uglify = require('gulp-uglify'),
   	purify = require('gulp-purify-css'),
-  	cleanCSS = require('gulp-clean-css');
+  	cleanCSS = require('gulp-clean-css'),
+  	sass = require('gulp-sass'),
+  	maps = require('gulp-sourcemaps'),
+  	autoprefixer = require('autoprefixer'),
 
 	// folders
 	folder = {
@@ -34,7 +37,7 @@ gulp.task('images', function() {
 gulp.task('html', ['images'], function() {
 	var
 		htmlDest = folder.build,
-		html = gulp.src(folder.src + '*.html')
+		html = gulp.src(folder.src + 'html/*.html')
 			.pipe(newer(htmlDest));
 
 	return html.pipe(gulp.dest(htmlDest));
@@ -50,10 +53,18 @@ gulp.task('js', function() {
 
 });
 
-// CSS clean up and minification
-gulp.task('css', ['images'], function() {
-	return gulp.src(folder.src + 'css/*')
-		.pipe(purify([folder.src + 'js/*.js', folder.src + '*.html']))
-		.pipe(cleanCSS({compatibility: 'ie8'}))
-    	.pipe(gulp.dest(folder.build + 'css/')); 
+// Sass Compiler
+gulp.task('compileSass', function() {
+  return gulp.src(folder.src + "scss/style.scss")
+      .pipe(maps.init())
+      .pipe(sass())
+      .pipe(maps.write('./'))
+      .pipe(gulp.dest(folder.src + 'css/'));
 });
+
+// Sass watch task
+gulp.task('watchSass', function() {
+  gulp.watch(folder.src + 'scss/*.scss', ['compileSass']);
+})
+
+gulp.task('build', ['images', 'html', 'js', 'sass'], function() { });
