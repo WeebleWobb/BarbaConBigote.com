@@ -30,7 +30,7 @@ a:hover {
 .color-red {
   color: #d54935; }
 
-footer {
+.footer {
   background-color: #d54935;
   text-align: center;
   padding: 1em 0; }
@@ -57,7 +57,7 @@ hr {
 /* ===================================================================
 	02. Navigation
 =================================================================== */
-header {
+.nav-container {
   position: relative;
   right: 0;
   left: 0;
@@ -216,7 +216,6 @@ ul {
   padding: 2em 0; }
 
 #featuredWork {
-  box-shadow: 0 0 25px rgba(79, 44, 31, 0.4);
   margin-bottom: 4em; }
   #featuredWork .carousel-caption {
     position: relative;
@@ -241,6 +240,8 @@ ul {
       margin-left: 5px; }
       #featuredWork .carousel-indicators li.active {
         background-color: #fff; }
+  #featuredWork .carousel-item {
+    box-shadow: 0 0 25px rgba(79, 44, 31, 0.4); }
 
 /* ===================================================================
 	05. Work and Post
@@ -350,9 +351,43 @@ ul {
   padding-top: .5em;
   color: #efefef; }
 
+.brew {
+  box-shadow: 0 0 15px #d8d8d8;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 20px; }
+  .brew .brew-head {
+    padding: 1em 1em .5em; }
+    .brew .brew-head p {
+      margin-bottom: 0;
+      font-size: .75em; }
+  .brew .brew-body {
+    padding: .5em 1em .5em; }
+  .brew .brew-meta {
+    border-top: 1px solid #e7e7e7;
+    overflow: auto; }
+    .brew .brew-meta ul {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      display: flex;
+      flex-direction: row; }
+    .brew .brew-meta ul li {
+      font-size: .75em;
+      margin: 0;
+      padding: .5em 0;
+      border-right: 1px solid #e7e7e7;
+      text-align: center;
+      float: left;
+      flex: auto; }
+
 .detail-aspot-content {
   color: #efefef;
-  padding: 2em 15px; }
+  padding: 2em 0; }
+  .detail-aspot-content .contact {
+    margin-top: 10px; }
+    .detail-aspot-content .contact h5 {
+      margin-bottom: 0; }
 
 .is_about_detail {
   background-color: #d54935; }
@@ -371,5 +406,11 @@ ul {
     left: 0;
     top: 48%;
     background-color: #d54935; }
+
+.skill img {
+  box-shadow: 0 0 15px #d8d8d8; }
+
+.skill .skill-caption {
+  padding: 1em 0; }
 
 /*# sourceMappingURL=style.css.map */
