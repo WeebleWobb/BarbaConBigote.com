@@ -64,7 +64,7 @@ gulp.task('compileSass', function() {
 
 // Sass watch task
 gulp.task('watchSass', function() {
-  gulp.watch(folder.src + 'scss/*.scss', ['compileSass']);
+  gulp.watch(folder.src + 'scss/**/*.scss', ['compileSass']);
 })
 
 gulp.task('build', ['images', 'html', 'js', 'sass'], function() { });
