@@ -1,0 +1,63 @@
+/* ===================================================================
+	01. Global
+=================================================================== */
+
+a {
+	color: $orange;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: $brown;
+}
+
+.color-brown {
+	color: $brown;
+}
+
+.color-charcoal {
+	color: $charcoal;
+}
+
+.color-grey {
+	color: $grey;
+}
+
+.color-orange {
+	color: $orange;
+}
+
+.color-red {
+	color: $red;
+}
+
+.footer {
+	background-color: $red;
+	text-align: center;
+	padding: 1em 0;
+}
+
+hr {
+	border-color: $brown;
+}
+
+.is_home {
+	background-color: $red;
+}
+
+.is_not_home {
+	background-color: $grey;
+}
+
+#logo {
+	max-width: 120px;
+	z-index: 999;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.rwd-line {
+	display: block;
+}

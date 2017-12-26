@@ -1,0 +1,140 @@
+/* ===================================================================
+	06. About and About Details
+=================================================================== */
+
+.about-index {
+	padding: 0;
+}
+
+.about-category {
+	transition: background-color .5s ease, color .5s ease;
+	padding: 2em 15px;
+	border-top: 1px solid #cdcdcd;
+
+	&:hover {
+		color: $grey;
+		background-color: $red;
+		border: 0;
+	}
+}
+
+.about-content-left {
+	text-align: right;
+	background-color: #fff;
+}
+
+.about-content-left, .about-content-right {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.about-detail-content:nth-child(even) .about-content-right {
+	background-color: #f9f9f9;
+}
+
+.about-detail-aspot {
+	background-color: $red;
+}
+
+.about-detail-labels {
+	> div:first-child {
+		background-color: $brown;
+	}
+
+	> div:last-child {
+		background-color: $orange;
+	}
+
+	h6 {
+		font-weight: 400;
+		padding-top: .5em;
+		color: $grey;
+	}
+}
+
+.brew {
+	box-shadow: 0 0 15px #d8d8d8;
+	background-color: #fff;
+	border-radius: 3px;
+	margin-bottom: 20px;
+
+	.brew-head {
+		padding: 1em 1em .5em;
+
+		& p {
+			margin-bottom: 0;
+			font-size: .75em;
+		}
+	}
+
+	.brew-body {
+		padding: .5em 1em .5em;
+	}
+
+	.brew-meta {
+		border-top: 1px solid #e7e7e7;
+		overflow: auto;
+
+		& ul {
+			padding: 0;
+			list-style: none;
+			margin: 0;
+			display: flex;
+			flex-direction: row;
+		}
+
+		& ul li {
+			font-size: .75em;
+			margin: 0;
+			padding: .5em 0;
+			border-right: 1px solid #e7e7e7;
+			text-align: center;
+			float: left;
+			flex: auto;
+		}
+	}
+}
+
+.detail-aspot-content {
+	color: $grey;
+	padding: 2em 0;
+
+	& .contact {
+		margin-top: 10px;
+
+		& h5 {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.is_about_detail {
+	background-color: $red;
+}
+
+.is-process {
+	h6 {
+		@include position-relative {
+			color: $red;
+		}
+
+		&::before {
+			content: '';
+			height: 2px;
+			width: 60%;
+			position: absolute;
+			left: 0;
+			top: 48%;
+			background-color: $red;
+		}
+	}
+}
+
+.skill {
+	img {
+		box-shadow: 0 0 15px #d8d8d8;
+	}
+	.skill-caption {
+		padding: 1em 0;
+	}
+}

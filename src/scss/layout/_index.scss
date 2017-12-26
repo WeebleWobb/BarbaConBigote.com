@@ -1,0 +1,50 @@
+/* ===================================================================
+	04. Home
+=================================================================== */
+
+.aspot-content {
+	text-shadow: 0 0 5px rgba(79,44,31, .4);
+	padding: 2em 0;
+}
+
+#featuredWork {
+	margin-bottom: 4em;
+
+	.carousel-caption {
+		@include position-relative {
+			background-color: $grey;
+			text-align: left;
+			padding: .75em 1em;
+			@include rounded-bottom-corners;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.carousel-indicators {
+		bottom: -40px;
+
+		li {
+			background-color: $orange;
+			width: 11px;
+			height: 11px;
+			border-radius: 100%;
+			margin-right: 5px;
+			margin-left: 5px;
+
+			&.active {
+				background-color: #fff;
+			}
+		}
+	}
+
+	.carousel-inner {
+		
+	}
+
+	.carousel-item {
+		box-shadow: $shadow;
+	}
+}

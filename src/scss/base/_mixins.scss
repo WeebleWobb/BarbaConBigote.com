@@ -1,0 +1,66 @@
+// ===================================================================
+//	Mixins 
+// ===================================================================
+
+
+// UI Elements
+@mixin rounded-bottom-corners {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+
+// Animations
+@mixin element-animation-in {
+	opacity: 1;
+	transform: translateY(0);
+	-ms-transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-o-transform: translateY(0);
+}
+
+@mixin element-animation-out {
+	transition: transform .25s cubic-bezier(0.05, 1.04, 0.72, 0.98), opacity .25s ease-in;
+	opacity: 0;
+	transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	-webkit-transform: translateY(20px);
+	-o-transform: translateY(20px);
+}
+
+// Element Position
+@mixin position-relative {
+	position: relative;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	@content;
+}
+
+@mixin position-absolute {
+	position: absolute;
+	left: 0;
+	top: 0;
+	@content;
+}
+
+// Media Query
+@mixin media($break) {
+	@if $break == 'sm' {
+		@media (min-width: $break-sm) {
+			@content;
+		}
+	} @else if $break == 'md' {
+		@media (min-width: $break-md) {
+			@content;
+		}
+	} @else if $break == 'lg' {
+		@media (min-width: $break-lg) {
+			@content;
+		}
+	} @else if $break == 'xl' {
+		@media (min-width: $break-lg) {
+			@content;
+		}
+	}
+}
