@@ -1,2 +1,2 @@
 # BarbaConBigote
-Portfolio website redesign
+Portfolio website redesign: Utilizing Gulp, Sass, and NPM modules
