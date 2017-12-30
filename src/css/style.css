@@ -30,11 +30,6 @@ a:hover {
 .color-red {
   color: #d54935; }
 
-.footer {
-  background-color: #d54935;
-  text-align: center;
-  padding: 1em 0; }
-
 hr {
   border-color: #4f2c1f; }
 
@@ -53,6 +48,9 @@ hr {
 
 .rwd-line {
   display: block; }
+  @media (min-width: 768px) {
+    .rwd-line {
+      display: inline; } }
 
 /* ===================================================================
 	02. Navigation
@@ -63,6 +61,9 @@ hr {
   left: 0;
   bottom: 0;
   height: 93px; }
+  .nav-container .container {
+    display: block;
+    margin: 0 auto; }
 
 .main-nav {
   background-color: #d54935;
@@ -97,8 +98,14 @@ hr {
       -ms-transform: translateY(0);
       -webkit-transform: translateY(0);
       -o-transform: translateY(0); }
+    @media (min-width: 768px) {
+      .main-nav .contact {
+        margin-left: 10em; } }
   .main-nav .nav {
     margin-top: 7em; }
+    @media (min-width: 768px) {
+      .main-nav .nav {
+        margin-left: 10em; } }
   .main-nav .nav-item {
     transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98), opacity 0.25s ease-in;
     opacity: 0;
@@ -164,8 +171,44 @@ hr {
 #navBar {
   position: absolute;
   left: 0;
+  right: 0;
   top: 0;
   z-index: 999; }
+
+.footer {
+  background-color: #d54935;
+  padding: 1em 0 .5em; }
+  @media (min-width: 768px) {
+    .footer {
+      padding: 2em 0 1em; } }
+  .footer h3 {
+    text-align: center; }
+    @media (min-width: 768px) {
+      .footer h3 {
+        text-align: left; } }
+
+.footer-nav {
+  display: none; }
+  @media (min-width: 768px) {
+    .footer-nav {
+      display: block; } }
+  .footer-nav .nav-item:last-child .nav-link {
+    padding-right: 0; }
+  .footer-nav .nav-link {
+    text-decoration: none; }
+
+.signoff {
+  padding: 1.5em 0 .5em; }
+  .signoff div:first-child {
+    text-align: center; }
+    @media (min-width: 768px) {
+      .signoff div:first-child {
+        text-align: left; } }
+  .signoff div:last-child {
+    text-align: center; }
+    @media (min-width: 768px) {
+      .signoff div:last-child {
+        text-align: right; } }
 
 /* ===================================================================
 	03. Typography
@@ -178,35 +221,59 @@ body {
 h1 {
   font-size: 2.625em;
   font-weight: 700; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.75em; } }
 
 h2 {
   font-size: 2.25em;
   font-weight: 700; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 3em; } }
 
 h3 {
   font-size: 2em;
   font-weight: 700; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 2.25em; } }
 
 h4 {
   font-size: 1.625em;
   font-weight: 600; }
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 2em; } }
 
 h5 {
   font-size: 1.3125em;
   font-weight: 700; }
+  @media (min-width: 768px) {
+    h5 {
+      font-size: 1.75em; } }
 
 h6 {
   font-size: 1.125em;
   font-weight: 600; }
+  @media (min-width: 768px) {
+    h6 {
+      font-size: 1.3125em; } }
 
 p {
   font-size: .875em;
   font-weight: 400;
   margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 1em; } }
 
 ul {
   font-size: .875em;
   padding-left: 1em; }
+  @media (min-width: 768px) {
+    ul {
+      font-size: 1em; } }
 
 /* ===================================================================
 	04. Home
@@ -243,9 +310,34 @@ ul {
   #featuredWork .carousel-item {
     box-shadow: 0 0 25px rgba(79, 44, 31, 0.4); }
 
+@media (min-width: 768px) {
+  .index-content {
+    height: 87vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    .index-content .aspot-content {
+      align-self: center; } }
+
 /* ===================================================================
 	05. Work and Post
 =================================================================== */
+.repos {
+  display: none; }
+  @media (min-width: 768px) {
+    .repos {
+      display: block;
+      margin-top: 3em;
+      margin-bottom: 5em; } }
+  .repos .repos-post {
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    margin: 1em 0; }
+  .repos .repos-post-meta {
+    margin-top: 2em; }
+
 .work, .post {
   position: relative;
   right: 0;
@@ -314,17 +406,60 @@ ul {
 /* ===================================================================
 	06. About and About Details
 =================================================================== */
-.about-index {
-  padding: 0; }
+.about-index .content {
+  position: relative; }
+  @media (min-width: 768px) {
+    .about-index .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh; } }
 
 .about-category {
-  transition: background-color .5s ease, color .5s ease;
+  transition: background-color .125s ease-in, color .125s ease-in;
   padding: 2em 15px;
   border-top: 1px solid #cdcdcd; }
   .about-category:hover {
     color: #efefef;
     background-color: #d54935;
     border: 0; }
+  @media (min-width: 768px) {
+    .about-category {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      border-top: none;
+      border-right: 1px solid #cdcdcd;
+      padding: 0 2em; }
+      .about-category:hover .about-category-content div {
+        height: 100px;
+        margin: 10px 0; }
+      .about-category:hover .about-category-content div hr, .about-category:hover .about-category-content div p, .about-category:hover .about-category-content div a {
+        opacity: 1;
+        transform: translateY(0); }
+      .about-category:hover .about-category-content div p {
+        transition-delay: .125s; }
+      .about-category:hover .about-category-content div a {
+        transition-delay: .25s; } }
+
+.about-category-content div hr, .about-category-content div p {
+  display: none; }
+
+@media (min-width: 768px) {
+  .about-category-content {
+    align-self: center; }
+    .about-category-content div {
+      height: 0;
+      transition: height .25s ease-in;
+      margin: 0;
+      display: block; }
+      .about-category-content div hr, .about-category-content div p, .about-category-content div a {
+        display: block;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity .25s ease-in, transform .25s ease-in; } }
 
 .about-content-left {
   text-align: right;
@@ -334,11 +469,37 @@ ul {
   padding-top: .5em;
   padding-bottom: .5em; }
 
+@media (min-width: 768px) {
+  .about-detail-container {
+    float: right;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 996;
+    top: 0;
+    right: 0;
+    }
+    .about-detail-container .about-detail-content:first-child {
+      border: 1px solid red; } }
+
 .about-detail-content:nth-child(even) .about-content-right {
   background-color: #f9f9f9; }
 
 .about-detail-aspot {
   background-color: #d54935; }
+  @media (min-width: 768px) {
+    .about-detail-aspot {
+      float: left;
+      width: 50vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 997; } }
 
 .about-detail-labels > div:first-child {
   background-color: #4f2c1f; }
@@ -384,6 +545,9 @@ ul {
 .detail-aspot-content {
   color: #efefef;
   padding: 2em 0; }
+  @media (min-width: 768px) {
+    .detail-aspot-content {
+      align-self: center; } }
   .detail-aspot-content .contact {
     margin-top: 10px; }
     .detail-aspot-content .contact h5 {
@@ -391,6 +555,9 @@ ul {
 
 .is_about_detail {
   background-color: #d54935; }
+  @media (min-width: 768px) {
+    .is_about_detail {
+      background-color: transparent; } }
 
 .is-process h6 {
   position: relative;

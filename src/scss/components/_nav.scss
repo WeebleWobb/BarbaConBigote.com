@@ -6,6 +6,11 @@
 	@include position-relative {
 		height: 93px;
 	}
+
+	.container {
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 .main-nav {
@@ -37,10 +42,18 @@
 			transition-delay: .625s;
 			@include element-animation-in;
 		}
+
+		@include media('md') {
+			margin-left: 10em;
+		}
 	}
 
 	.nav {
 		margin-top: 7em;
+
+		@include media('md') {
+			margin-left: 10em;
+		}
 	}
 
 	.nav-item {
@@ -122,7 +135,9 @@
 }
 
 #navBar {
-	@include position-absolute {
-		z-index: 999;
-	}
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 999;
 }

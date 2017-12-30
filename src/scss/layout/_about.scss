@@ -1,13 +1,19 @@
 /* ===================================================================
 	06. About and About Details
 =================================================================== */
+.about-index .content {
+	position: relative;
 
-.about-index {
-	padding: 0;
+	@include media('md') {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+	}
 }
 
 .about-category {
-	transition: background-color .5s ease, color .5s ease;
+	transition: background-color .125s ease-in, color .125s ease-in;
 	padding: 2em 15px;
 	border-top: 1px solid #cdcdcd;
 
@@ -15,6 +21,64 @@
 		color: $grey;
 		background-color: $red;
 		border: 0;
+	}
+
+	@include media('md') {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		border-top: none;
+		border-right: 1px solid #cdcdcd;
+		padding: 0 2em;
+
+		&:hover .about-category-content div {
+			height: 100px;
+			margin: 10px 0;
+		}
+
+		&:hover .about-category-content div {
+			hr, p, a {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			p {
+				transition-delay: .125s;
+			}
+
+			a {
+				transition-delay: .25s;
+			}
+		}
+	}
+}
+
+.about-category-content {
+
+	div {
+		hr, p, {
+			display: none;
+		}
+	}
+
+	@include media('md') {
+		align-self: center;
+
+		div {
+			height: 0;
+			transition: height .25s ease-in;
+			margin: 0;
+			display: block;
+
+			hr, p, a {
+				display: block;
+				opacity: 0;
+				transform: translateY(40px);
+				transition: opacity .25s ease-in, transform .25s ease-in;
+			}
+		}
 	}
 }
 
@@ -28,12 +92,43 @@
 	padding-bottom: .5em;
 }
 
+.about-detail-container {
+
+	@include media('md') {
+		float: right;
+	    width: 50vw;
+	    height: 100vh;
+	    position: absolute;
+	    z-index: 996;
+	    top: 0;
+	    right: 0;
+
+	    .about-detail-content:first-child {
+	    	border: 1px solid red;
+	    }
+	}
+}
+
 .about-detail-content:nth-child(even) .about-content-right {
 	background-color: #f9f9f9;
 }
 
 .about-detail-aspot {
 	background-color: $red;
+
+	@include media('md') {
+		float: left;
+		width: 50vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 997;
+	}
 }
 
 .about-detail-labels {
@@ -99,7 +194,11 @@
 	color: $grey;
 	padding: 2em 0;
 
-	& .contact {
+	@include media('md') {
+		align-self: center;
+	}
+
+	.contact {
 		margin-top: 10px;
 
 		& h5 {
@@ -110,6 +209,10 @@
 
 .is_about_detail {
 	background-color: $red;
+
+	@include media('md') {
+		background-color: transparent;
+	}
 }
 
 .is-process {

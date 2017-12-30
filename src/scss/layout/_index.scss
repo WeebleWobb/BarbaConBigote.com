@@ -48,3 +48,17 @@
 		box-shadow: $shadow;
 	}
 }
+
+@include media('md') {
+	.index-content {
+		height: 87vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+
+		.aspot-content {
+			align-self: center;
+		}
+	}
+}

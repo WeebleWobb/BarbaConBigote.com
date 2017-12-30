@@ -1,6 +1,27 @@
 /* ===================================================================
 	05. Work and Post
 =================================================================== */
+.repos {
+	display: none;
+
+	@include media('md') {
+		display: block;
+		margin-top: 3em;
+		margin-bottom: 5em;
+	}
+
+	.repos-post {
+		padding: 1em;
+		background-color: #fff;
+		border: 1px solid #dbdbdb;
+		margin: 1em 0;
+	}
+
+	.repos-post-meta {
+		margin-top: 2em;
+	}
+}
+
 
 .work, .post {
 	@include position-relative {
