@@ -88,23 +88,27 @@
 }
 
 .about-content-left, .about-content-right {
-	padding-top: .5em;
-	padding-bottom: .5em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 .about-detail-container {
 
 	@include media('md') {
+		padding-top: 10em;
 		float: right;
 	    width: 50vw;
 	    height: 100vh;
-	    position: absolute;
-	    z-index: 996;
-	    top: 0;
-	    right: 0;
+		position: relative;
 
-	    .about-detail-content:first-child {
-	    	border: 1px solid red;
+	    &::before {
+			content: "";
+			position: absolute;
+			top: -10em;
+			left: 0;
+			background-color: #fff;
+			width: 33.333333%;
+			height: 100vh;
 	    }
 	}
 }
@@ -190,6 +194,35 @@
 	}
 }
 
+.brew-stats-container {
+	display: none;
+
+	@include media('md') {
+		display: block;
+
+		.brew-stats {
+			color: $brown;
+			text-align: center;
+			padding: 1em .5em;
+			box-shadow: 0 0 15px #d8d8d8;
+			background-color: #fff;
+			border-radius: 3px;
+			margin-bottom: 20px;
+
+			h6 {
+				font-size: 1.5em;
+				margin: 0;
+			}
+
+			p {
+				font-size: .875em;
+				margin: 0;
+			}
+		}
+	}
+
+}
+
 .detail-aspot-content {
 	color: $grey;
 	padding: 2em 0;
@@ -216,9 +249,10 @@
 }
 
 .is-process {
-	h6 {
+	h5 {
 		@include position-relative {
 			color: $red;
+			background-color: #fff;
 		}
 
 		&::before {
@@ -229,7 +263,22 @@
 			left: 0;
 			top: 48%;
 			background-color: $red;
+
+			@include media('md') {
+				left: 1em;
+			}
 		}
+	}
+}
+
+.is_skills, .is_personal, .is_contact {
+	@include media('md') {
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+
+	&::before {
+		display: none;
 	}
 }
 
@@ -239,5 +288,14 @@
 	}
 	.skill-caption {
 		padding: 1em 0;
+
+		h6 {
+			font-size: 1em;
+			margin-bottom: 0;
+		}
+
+		p {
+			font-size: .875em;
+		}
 	}
 }
