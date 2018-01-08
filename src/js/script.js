@@ -5,7 +5,7 @@
 * Copyright (C) 2017 barbaconbigote.com - A project by Juan D. Bolaños
 */
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
 
 	// --------------------- 01. Navigation --------------------- //
