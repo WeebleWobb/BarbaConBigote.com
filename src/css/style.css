@@ -1,9 +1,14 @@
 @charset "UTF-8";
-/*!
-	* Barba con Bigote v1.0
-	* @license MIT licensed
-	*
-	* Copyright (C) 2017 barbaconbigote.com - A project by Juan D. Bolaños
+/*
+Theme Name: Barba con Bigote
+Theme URI: https://barbaconbigote.com
+Author: Juan D. Bolaños
+Author URI: https://barbaconbigote.com
+Description: Wordpress theme developed for portfolio site.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: barbaconbigote
 */
 /* ===================================================================
 	01. Global
@@ -355,14 +360,26 @@ ul {
   padding: .75em 1em;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; }
-  .work-caption p, .post-caption p {
-    margin-bottom: 0; }
+  .work-caption .project-roles, .post-caption .project-roles {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 5px;
+    overflow: hidden; }
+    .work-caption .project-roles .role, .post-caption .project-roles .role {
+      float: left;
+      padding: 0 7px;
+      border-right: 1px solid #4f2c1f; }
+      .work-caption .project-roles .role:first-child, .post-caption .project-roles .role:first-child {
+        padding-left: 0; }
+      .work-caption .project-roles .role:last-child, .post-caption .project-roles .role:last-child {
+        border-right: none; }
 
 .work-img, .post-img {
   position: relative;
   right: 0;
   left: 0;
   bottom: 0;
+  background-color: #fff;
   height: auto;
   width: 100%;
   overflow: hidden; }
@@ -466,21 +483,24 @@ ul {
   background-color: #fff; }
 
 .about-content-left, .about-content-right {
-  padding-top: .5em;
-  padding-bottom: .5em; }
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
 @media (min-width: 768px) {
   .about-detail-container {
+    padding-top: 10em;
     float: right;
     width: 50vw;
     height: 100vh;
-    position: absolute;
-    z-index: 996;
-    top: 0;
-    right: 0;
-    }
-    .about-detail-container .about-detail-content:first-child {
-      border: 1px solid red; } }
+    position: relative; }
+    .about-detail-container::before {
+      content: "";
+      position: absolute;
+      top: -10em;
+      left: 0;
+      background-color: #fff;
+      width: 33.333333%;
+      height: 100vh; } }
 
 .about-detail-content:nth-child(even) .about-content-right {
   background-color: #f9f9f9; }
@@ -542,6 +562,26 @@ ul {
       float: left;
       flex: auto; }
 
+.brew-stats-container {
+  display: none; }
+  @media (min-width: 768px) {
+    .brew-stats-container {
+      display: block; }
+      .brew-stats-container .brew-stats {
+        color: #4f2c1f;
+        text-align: center;
+        padding: 1em .5em;
+        box-shadow: 0 0 15px #d8d8d8;
+        background-color: #fff;
+        border-radius: 3px;
+        margin-bottom: 20px; }
+        .brew-stats-container .brew-stats h6 {
+          font-size: 1.5em;
+          margin: 0; }
+        .brew-stats-container .brew-stats p {
+          font-size: .875em;
+          margin: 0; } }
+
 .detail-aspot-content {
   color: #efefef;
   padding: 2em 0; }
@@ -559,13 +599,14 @@ ul {
     .is_about_detail {
       background-color: transparent; } }
 
-.is-process h6 {
+.is-process h5 {
   position: relative;
   right: 0;
   left: 0;
   bottom: 0;
-  color: #d54935; }
-  .is-process h6::before {
+  color: #d54935;
+  background-color: #fff; }
+  .is-process h5::before {
     content: '';
     height: 2px;
     width: 60%;
@@ -573,11 +614,27 @@ ul {
     left: 0;
     top: 48%;
     background-color: #d54935; }
+    @media (min-width: 768px) {
+      .is-process h5::before {
+        left: 1em; } }
+
+@media (min-width: 768px) {
+  .is_skills, .is_personal, .is_contact {
+    padding-left: 4em;
+    padding-right: 4em; } }
+
+.is_skills::before, .is_personal::before, .is_contact::before {
+  display: none; }
 
 .skill img {
   box-shadow: 0 0 15px #d8d8d8; }
 
 .skill .skill-caption {
   padding: 1em 0; }
+  .skill .skill-caption h6 {
+    font-size: 1em;
+    margin-bottom: 0; }
+  .skill .skill-caption p {
+    font-size: .875em; }
 
 /*# sourceMappingURL=style.css.map */
