@@ -57,6 +57,9 @@
 							</figure>
 						</div>
 					<?php endwhile; ?>
+
+					<?php wp_reset_postdata(); ?>
+
 				<?php else : ?>
 					<div class="col-12">
 						<h4 class="text-center">Sorry, something went wrong and my case studies are showing up.</h4>
@@ -64,6 +67,7 @@
 				<?php endif; ?>
 				
 			</div>
+
 		</div>
 	</section>
 	<!-- End Featured Work -->

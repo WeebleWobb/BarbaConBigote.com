@@ -36,6 +36,9 @@
 					</div>
 
 				<?php endwhile; ?>
+				
+				<?php wp_reset_postdata(); ?>
+
 			<?php else : ?>
 				<div class="col-12">
 					<h4 class="text-center">Sorry, something went wrong and about is showing up.</h4>
@@ -43,6 +46,7 @@
 			<?php endif; ?>
 
 		</div>
+
 	</section>
 	<!-- End About Entries -->
 </main>

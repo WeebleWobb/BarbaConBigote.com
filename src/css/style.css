@@ -301,6 +301,19 @@ ul {
     border-bottom-right-radius: 5px; }
     #featuredWork .carousel-caption p {
       margin-bottom: 0; }
+    #featuredWork .carousel-caption .project-roles {
+      list-style: none;
+      padding-left: 0;
+      margin: 10px 0 5px;
+      overflow: hidden; }
+      #featuredWork .carousel-caption .project-roles .role {
+        float: left;
+        padding: 0 7px;
+        border-right: 1px solid #4f2c1f; }
+        #featuredWork .carousel-caption .project-roles .role:first-child {
+          padding-left: 0; }
+        #featuredWork .carousel-caption .project-roles .role:last-child {
+          border-right: none; }
   #featuredWork .carousel-indicators {
     bottom: -40px; }
     #featuredWork .carousel-indicators li {
@@ -313,7 +326,11 @@ ul {
       #featuredWork .carousel-indicators li.active {
         background-color: #fff; }
   #featuredWork .carousel-item {
-    box-shadow: 0 0 25px rgba(79, 44, 31, 0.4); }
+    background-color: #fff;
+    box-shadow: 0 0 25px rgba(79, 44, 31, 0.4);
+    border-radius: 5px; }
+  #featuredWork .work-img {
+    background-color: #fff; }
 
 @media (min-width: 768px) {
   .index-content {

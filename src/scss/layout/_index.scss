@@ -21,6 +21,26 @@
 		p {
 			margin-bottom: 0;
 		}
+
+		.project-roles {
+			list-style: none;
+			padding-left: 0;
+			margin: 10px 0 5px;
+			overflow: hidden;
+
+			.role {
+				float: left;
+				padding: 0 7px; 
+				border-right: 1px solid $brown;
+
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
 	}
 
 	.carousel-indicators {
@@ -40,12 +60,14 @@
 		}
 	}
 
-	.carousel-inner {
-		
+	.carousel-item {
+		background-color: #fff;
+		box-shadow: $shadow;
+		border-radius: 5px;
 	}
 
-	.carousel-item {
-		box-shadow: $shadow;
+	.work-img {
+		background-color: #fff;
 	}
 }
 
