@@ -19,7 +19,8 @@
 						<?php endif; ?>
 					</div>
 				</div>
-
+				
+				<!-- Featured Work Carousel -->
 				<div class="col-12 col-md-5 offset-md-1">
 					<div id="featuredWork" class="carousel slide" data-ride="carousel" data-interval="6000">
 						<?php 
@@ -48,7 +49,12 @@
 										}
 									?>
 									<div class="carousel-item <?php echo $class; ?>">
-								  		<img class="d-block w-100" src="<?php the_post_thumbnail_url(); ?>" alt="">
+								  		<div class="work-img">
+								  			<img class="d-block w-100" src="<?php the_post_thumbnail_url(); ?>" alt="">
+								  			<div class="work-hover">
+												<a class="btn btn-primary" href="<?php echo get_post_permalink(); ?>">View Work</a>
+											</div>
+							  			</div>
 										<div class="carousel-caption">
 											<h5 class="color-red"><?php the_title(); ?></h5>
 											<ul class="color-brown project-roles">
