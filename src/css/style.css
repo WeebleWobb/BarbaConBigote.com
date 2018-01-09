@@ -20,6 +20,15 @@ a {
 a:hover {
   color: #4f2c1f; }
 
+.btn-primary {
+  background-color: #d54935;
+  border-color: #d54935; }
+
+.btn-primary:hover {
+  background-color: #f5a800;
+  border-color: #f5a800;
+  cursor: pointer; }
+
 .color-brown {
   color: #4f2c1f; }
 
@@ -377,6 +386,11 @@ ul {
   padding: .75em 1em;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; }
+  .work-caption a, .post-caption a {
+    text-decoration: none;
+    color: #d54935; }
+    .work-caption a:hover, .post-caption a:hover {
+      color: #323232; }
   .work-caption .project-roles, .post-caption .project-roles {
     list-style: none;
     padding-left: 0;
@@ -396,6 +410,8 @@ ul {
   right: 0;
   left: 0;
   bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background-color: #fff;
   height: auto;
   width: 100%;
@@ -423,7 +439,7 @@ ul {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #d54935; }
+  background-color: rgba(50, 50, 50, 0.9); }
   .work-hover .btn-primary, .post-hover .btn-primary {
     opacity: 0;
     transform: translateY(20px);
