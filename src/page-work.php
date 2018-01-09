@@ -38,11 +38,11 @@
 								<div class="work-img">	
 									<img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid" />
 									<div class="work-hover">
-										<a class="btn btn-primary" href="<?php echo get_post_permalink(); ?>">View Work</a>
+										<a class="btn btn-primary" href="<?php the_permalink(); ?>">View Work</a>
 									</div>
 								</div>
 								<figcaption class="work-caption">
-									<h5 class="color-red"><?php the_title(); ?></h5>
+									<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
 									<ul class="color-brown project-roles">
 										<?php 
 											$post_id = get_the_id();
@@ -84,6 +84,8 @@
 			<!--*************************************************
 				Will be pulled from Git Hub API 
 			**************************************************-->
+
+			<?php include('github.php'); ?>
 
 			<div class="col-4">
 				<article class="repos-post">

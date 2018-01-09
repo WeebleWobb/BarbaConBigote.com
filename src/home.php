@@ -37,7 +37,7 @@
 									</div>
 								</div>
 								<figcaption class="post-caption">
-									<h5 class="color-red"><?php the_title(); ?></h5>
+									<a href="<?php echo the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
 								</figcaption>
 							</figure>
 						</article>
