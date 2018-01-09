@@ -7,12 +7,14 @@
 				<h5><?php echo "0" . $number++ . "."; ?></h5>
 			</aside>
 			<article class="col-8 about-content-right">
-				<!-- Detail Custom Field Goes here -->
+
+				<!-- Detail ACF Goes here -->
 				<h5 class="color-red">Title</h5>
 				<strong>Sub Title</strong>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 				<strong>Sub Title</strong>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				
 			</article>
 		</div>
 	<?php endwhile; else : ?>
