@@ -11,6 +11,17 @@ a:hover {
 	color: $brown;
 }
 
+.btn-primary {
+	background-color: $red;
+	border-color: $red;
+}
+
+.btn-primary:hover {
+	background-color: $orange;
+	border-color: $orange;
+	cursor: pointer;
+}
+
 .color-brown {
 	color: $brown;
 }

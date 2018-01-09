@@ -27,6 +27,7 @@
 	@include position-relative {
 		box-shadow: 0 0 20px #d8d8d8;
 	}
+
 }
 
 .work-caption, .post-caption {
@@ -36,7 +37,16 @@
 		padding: .75em 1em;
 		@include rounded-bottom-corners;
 	}
+	
+	a {
+		text-decoration: none;
+		color: $red;
 
+		&:hover {
+			color: $charcoal;
+		}
+	}
+	
 	.project-roles {
 		list-style: none;
 		padding-left: 0;
@@ -60,6 +70,8 @@
 
 .work-img, .post-img {
 	@include position-relative {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
 		background-color: #fff;
 		height: auto;
 		width: 100%;
@@ -92,7 +104,7 @@
 		justify-content: center;
 		width: 100%;
 		height: 100%;
-		background-color: $red;
+		background-color: rgba(50,50,50, .9);
 	}
 
 	.btn-primary {
