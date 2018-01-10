@@ -10,11 +10,17 @@
 		margin-bottom: 5em;
 	}
 
+	.repo-flex {
+		display: flex;
+		align-items: stretch;
+	}
+
 	.repos-post {
 		padding: 1em;
 		background-color: #fff;
 		border: 1px solid #dbdbdb;
 		margin: 1em 0;
+		flex: 1;
 	}
 
 	.repos-post-meta {
