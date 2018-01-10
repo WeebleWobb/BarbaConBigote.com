@@ -76,14 +76,10 @@
 	<section class="repos container">
 		<div class="row">
 			<div class="col-12 mb-3">
-				<h3>Current Repositories (15)</h3>
+				<h3>Current Repositories</h3>
 			</div>
 		</div>
 		<div class="row">
-
-			<!--*************************************************
-				Will be pulled from Git Hub API 
-			**************************************************-->
 
 			<?php include('inc/github.php'); ?>
 
