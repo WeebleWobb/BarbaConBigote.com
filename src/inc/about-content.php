@@ -1,4 +1,4 @@
-<!-- Process Page Conditional -->
+<!-- Process Section -->
 <?php if(is_single('process')) { ?>
 	<!-- Process Content -->
 	<?php if(have_rows('process_content')) : $number = 1; while(have_rows('process_content')) : the_row(); ?>
@@ -8,7 +8,6 @@
 			</aside>
 			<article class="col-8 about-content-right">
 
-				<!-- Detail ACF Goes here -->
 				<?php the_sub_field('process_detail'); ?>
 				
 			</article>
@@ -20,32 +19,41 @@
 	<?php endif; ?>
 	<!-- End Process Content -->
 
-<!-- Personal Page Conditional -->
-<?php } elseif(is_single('personal')) { ?>
+<!-- Personal Section -->
+<?php } elseif(is_single('personal')) { 
 
-	<?php include('untappd.php'); ?>
+	include('untappd.php'); 
 
-<!-- Experience Page Conditional -->
-<?php } elseif(is_single('skills')) { ?>
+?>
 
-	<?php include('treehouse.php'); ?>
+<!-- Skills Section -->
+<?php } elseif(is_single('skills')) {
 
-<!-- Experience Page Conditional -->	
-<?php } elseif('experience') { ?>
+	include('treehouse.php'); 
+
+?>
+
+<!-- Experience Section -->	
+<?php } elseif('experience') { 
 	
-	<?php include('linkedin.php'); ?>
+	include('linkedin.php'); 
 
+?>
+
+<!-- Standard About Section -->
 <?php } else { ?>
 	
 	<div class="row about-detail-content">
 		<div class="col-12 col-md-10 offset-md-1">
+
 			<?php if(have_posts()) : while(have_posts()) : the_post() ?>
 
 				<?php the_content(); ?>
 				
 			<?php endwhile; else : ?>
-				
+				<h4>Sorry, seems something went wrong.</h4>
 			<?php endif; ?>
+
 		</div>
 	</div>
 
