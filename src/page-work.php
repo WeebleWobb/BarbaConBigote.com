@@ -72,24 +72,8 @@
 	</section>
 	<!-- End Featured Work -->
 
-	<!-- Repositories -->
-	<section class="repos container">
-		<div class="row">
-			<div class="col-12 mb-3">
-				<h3>Current Repositories</h3>
-			</div>
-		</div>
-		<div class="row">
+	<?php include('inc/github.php'); ?>
 
-			<?php include('inc/github.php'); ?>
-
-		</div>
-	</section>
-	<!-- End of Repositories -->
 </main>
 
-<?php
-
-	include('footer.php');
-
-?>
+<?php include('footer.php'); ?>
