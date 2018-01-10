@@ -10,7 +10,7 @@ var
   	cleanCSS = require('gulp-clean-css'),
   	sass = require('gulp-sass'),
   	maps = require('gulp-sourcemaps'),
-  	autoprefixer = require('autoprefixer'),
+  	autoprefixer = require('gulp-autoprefixer'),
 
 	// folders
 	folder = {
@@ -44,6 +44,7 @@ gulp.task('compileSass', function() {
   return gulp.src(folder.src + "scss/style.scss")
       .pipe(maps.init())
       .pipe(sass())
+      .pipe(autoprefixer())
       .pipe(maps.write('./'))
       .pipe(gulp.dest(folder.src + 'css/'));
 });
