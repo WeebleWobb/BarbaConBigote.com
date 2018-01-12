@@ -755,7 +755,10 @@ ul {
 
 .skill img {
   -webkit-box-shadow: 0 0 15px #d8d8d8;
-          box-shadow: 0 0 15px #d8d8d8; }
+          box-shadow: 0 0 15px #d8d8d8;
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: 5px; }
 
 .skill .skill-caption {
   padding: 1em 0; }
