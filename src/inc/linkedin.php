@@ -9,6 +9,12 @@
 </div>
 <!-- End Labels -->
 
+<?php 
+	
+	$clientId = '782oiymnk1mkyj';
+	$clientSecret = 'RTaXgbd3qEKu9QLH';
+?>
+
 <!-- About Content will be pulled from LinkedIn API -->
 <div class="row about-detail-content">
 	<aside class="col-4 about-content-left">
