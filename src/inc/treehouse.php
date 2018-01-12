@@ -12,59 +12,38 @@
 	</div>
 	</div>
 <div class="row about-detail-content">
-	<div class="col-6 col-lg-4">
-		<figure class="skill">
-			<img class="img-fluid" src="https://placehold.it/600x600">
-			<figcaption class="skill-caption">
-				<h6 class="color-red">Tree House Badge</h6>
-				<p>Achieved Aug 8th 2017</p>
-			</figcaption>
-		</figure>
-	</div>
-	<div class="col-6 col-lg-4">
-		<figure class="skill">
-			<img class="img-fluid" src="https://placehold.it/600x600">
-			<figcaption class="skill-caption">
-				<h6 class="color-red">Tree House Badge</h6>
-				<p>Achieved Aug 8th 2017</p>
-			</figcaption>
-		</figure>
-	</div>
-	<div class="col-6 col-lg-4">
-		<figure class="skill">
-			<img class="img-fluid" src="https://placehold.it/600x600">
-			<figcaption class="skill-caption">
-				<h6 class="color-red">Tree House Badge</h6>
-				<p>Achieved Aug 8th 2017</p>
-			</figcaption>
-		</figure>
-	</div>
-	<div class="col-6 col-lg-4">
-		<figure class="skill">
-			<img class="img-fluid" src="https://placehold.it/600x600">
-			<figcaption class="skill-caption">
-				<h6 class="color-red">Tree House Badge</h6>
-				<p>Achieved Aug 8th 2017</p>
-			</figcaption>
-		</figure>
-	</div>
-	<div class="col-6 col-lg-4">
-		<figure class="skill">
-			<img class="img-fluid" src="https://placehold.it/600x600">
-			<figcaption class="skill-caption">
-				<h6 class="color-red">Tree House Badge</h6>
-				<p>Achieved Aug 8th 2017</p>
-			</figcaption>
-		</figure>
-	</div>
-	<div class="col-6 col-lg-4">
-		<figure class="skill">
-			<img class="img-fluid" src="https://placehold.it/600x600">
-			<figcaption class="skill-caption">
-				<h6 class="color-red">Tree House Badge</h6>
-				<p>Achieved Aug 8th 2017</p>
-			</figcaption>
-		</figure>
-	</div>
+
+	<?php 
+		
+		$url = 'https://teamtreehouse.com/weeblewobb.json';
+
+		$process = curl_init($url);
+		curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
+
+		$return = curl_exec($process);
+		$results = json_decode($return, true);
+
+		// echo $results["badges"][0]["name"];
+
+		foreach ($results["badges"] as $skill) {
+
+			$date = new DateTime($skill["earned_date"]);
+
+			echo '<div class="col-6 col-lg-4">'
+					. '<figure class="skill">'
+						. '<img class="img-fluid" src="' . $skill["icon_url"] . '">'
+						. '<figcaption class="skill-caption">'
+							. '<h6 class="color-red">' . $skill["name"] . '</h6>'
+							. '<p>' . $date->format('d-m-Y') . '</p>'
+						. '</figcaption>'
+					. '</figure>'
+				. '</div>';
+
+		}
+
+		curl_close($process);
+
+	?>
+
 </div>
 <!-- End About Content -->
