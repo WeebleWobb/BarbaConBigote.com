@@ -34,7 +34,7 @@
 						. '<img class="img-fluid" src="' . $skill["icon_url"] . '">'
 						. '<figcaption class="skill-caption">'
 							. '<h6 class="color-red">' . $skill["name"] . '</h6>'
-							. '<p>' . $date->format('d-m-Y') . '</p>'
+							. '<p>' . $date->format('m-d-Y') . '</p>'
 						. '</figcaption>'
 					. '</figure>'
 				. '</div>';

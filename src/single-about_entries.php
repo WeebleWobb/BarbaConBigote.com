@@ -1,8 +1,4 @@
-<?php 
-
-	include('header.php');
-
-?>
+<?php get_header(); ?>
 
 <main role="main">
 	
@@ -25,6 +21,4 @@
 	<!-- End Content -->
 </main>
 
-<?php 
-	include('footer.php');
-?>
+<?php get_footer(); ?>

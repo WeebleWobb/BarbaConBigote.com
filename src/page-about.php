@@ -1,8 +1,5 @@
-<?php 
+<?php get_header(); ?>
 
-	include('header.php');
-
-?>
 <main role="main" class="content">
 	<!-- About Entries -->
 	<section class="container-fluid">
@@ -51,8 +48,4 @@
 	<!-- End About Entries -->
 </main>
 
-<?php 
-
-	include('footer.php');
-
-?>
+<?php get_footer(); ?>

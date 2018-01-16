@@ -1,8 +1,4 @@
-<?php 
-
-	include('header.php');
-
-?>
+<?php get_header(); ?>
 
 <main role="main">
 	<!-- Headline -->
@@ -76,4 +72,4 @@
 
 </main>
 
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>

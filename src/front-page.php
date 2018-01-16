@@ -1,8 +1,4 @@
-<?php 
-
-	include('header.php'); 
-
-?>
+<?php get_header(); ?>
 
 <main role="main">
 	<section class="index-content">
@@ -98,6 +94,5 @@
 		</div>
 	</section>
 </main>
-<?php 
-	include('footer.php');
-?>
+
+<?php get_footer(); ?>
