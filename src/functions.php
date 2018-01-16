@@ -41,16 +41,14 @@ class barba_walker extends Walker_Nav_Menu {
 
 }
 
-/* ===========================================================
-Stylesheets and Scripts Enqueue function
-============================================================== */
+
 
 // CSS to head
 function barba_theme_style() {
     wp_enqueue_style('bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css');
     wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Signika+Negative:400,600,700');
     wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css');
-    
+    wp_enqueue_style('temp-style', get_template_directory_uri() . '/css/temp.css');
 }
 
 add_action('wp_enqueue_scripts', 'barba_theme_style');
@@ -66,3 +64,29 @@ function barba_theme_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'barba_theme_scripts');
+
+/* ===========================================================
+Custo Color WYSIWYG function
+============================================================== */
+
+function custom_color_options($init) {
+
+    $custom_colours = '
+        "4F2C1f", "Brown",
+        "323232", "Charcoal",
+        "EFEFEF", "Grey",
+        "F5A800", "Orange",
+        "D54935", "Red"
+    ';
+
+    // build colour grid default+custom colors
+    $init['textcolor_map'] = '['.$custom_colours.']';
+
+    // change the number of rows in the grid if the number of colors changes
+    // 8 swatches per row
+    $init['textcolor_rows'] = 1;
+
+    return $init;
+}
+
+add_filter('tiny_mce_before_init', 'custom_color_options');
