@@ -1,0 +1,1 @@
+jQuery(document).ready(function(o){o("#menu").on("click",function(){var s=o("#mainNav"),n=o("body");s.toggleClass("is-open"),o("#mainNav .nav-item, #mainNav .contact").toggleClass("is-open"),o("#menu").toggleClass("is-open"),s.hasClass("is-open")?n.css({overflow:"hidden"}):n.css({overflow:"auto"})}),o(".work-img, .post-img").hover(function(){o(this).toggleClass("hover")})});
