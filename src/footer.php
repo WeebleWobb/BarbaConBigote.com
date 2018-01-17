@@ -20,7 +20,7 @@
 					<a href="#"><h6>hola@barbaconbigote.com</h6></a>
 				</div>
 				<div class="col-12 col-md-6">
-					<p class="color-grey copyright">&copy; Copyright Juan D. Bolaños 2017 </p>
+					<p class="color-grey copyright">&copy; Copyright Juan D. Bolaños <?php echo date('Y'); ?></p>
 				</div>
 			</div>
 		</div>
