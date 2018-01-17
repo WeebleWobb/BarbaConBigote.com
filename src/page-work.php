@@ -68,8 +68,19 @@
 	</section>
 	<!-- End Featured Work -->
 
-	<?php include('inc/github.php'); ?>
+	<!-- Repositories -->
+	<section class="repos container">
 
+		<?php include('inc/github.php'); ?>
+
+		<div class="row">
+			<div class="col-12 text-center mt-3">
+				<a id="more-repos" href="#" class="btn btn-primary">View All Repos</a>
+			</div> 
+		</div>
+
+	</section>
+	<!-- End of Repositories -->
 </main>
 
 <?php get_footer(); ?>
