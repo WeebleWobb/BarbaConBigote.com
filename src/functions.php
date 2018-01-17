@@ -41,14 +41,11 @@ class barba_walker extends Walker_Nav_Menu {
 
 }
 
-
-
 // CSS to head
 function barba_theme_style() {
     wp_enqueue_style('bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css');
     wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Signika+Negative:400,600,700');
     wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('temp-style', get_template_directory_uri() . '/css/temp.css');
 }
 
 add_action('wp_enqueue_scripts', 'barba_theme_style');
