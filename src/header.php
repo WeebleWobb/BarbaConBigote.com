@@ -24,7 +24,7 @@
 		body_class($pageClass);
 	?> 
 >
-<header role="banner" class="is_about_detail nav-container">
+<header role="banner" class="nav-container<?php if(is_singular('about_entries')) { echo ' is_about_detail '; } ?>">
 	<div id="navBar" class="container py-3">
 		<div class="row align-items-center">
 			<div class="col-6">
