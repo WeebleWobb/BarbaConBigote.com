@@ -9,32 +9,87 @@ jQuery(document).ready(function($) {
 
 
 	// --------------------- 01. Navigation --------------------- //
-	$('#menu').on('click', function() {
+	var menu = $('#menu');
+	var header = $('header');
 
-		var $nav = $('#mainNav')
-		var $body = $('body')
+	// 1.1 Menu Button function
+	menu.on('click', function() {
 
+		var nav = $('#mainNav');
+		var body = $('body');
+		var navItems = $('#mainNav .nav-item, #mainNav .contact');
 
 		// Adds transitions to navigation when clicked
-		$nav.toggleClass('is-open');
-		$('#mainNav .nav-item, #mainNav .contact').toggleClass('is-open');
-		$('#menu').toggleClass('is-open');
+		nav.toggleClass('is-open');
+
+		navItems.toggleClass('is-open');
+		menu.toggleClass('is-open');
 
 		// Prevents site scrolling when navigation is open
-		if($nav.hasClass('is-open')) {
-			$body.css({'overflow': 'hidden'});
+		if(nav.hasClass('is-open')) {
+			body.css({'overflow': 'hidden'});
 		} else {
-			$body.css({'overflow': 'auto'});
+			body.css({'overflow': 'auto'});
 		}
 	});
 
-	// --------------------- 02. Work and Blog --------------------- //
-	$('.work-img, .post-img').hover(function() {
+	// 1.2 About detail nav scroll function
+	$(window).scroll(function() {
 
-		$(this).toggleClass('hover');
+		var windowTop = $(window).scrollTop();
+		var aboutNav = $('header.is_about_detail');
+
+		if( header.hasClass('is_about_detail') && windowTop >= 100) {
+			aboutNav.addClass('is_scrolled');
+		} else if(windowTop == 0) {
+			aboutNav.removeClass('is_scrolled');
+		}
 
 	});
 
+	// --------------------- 02. Work and Blog --------------------- //
+	var postIMG = $('.work-img, .post-img');
+	var moreRepos = $('#more-repos');
+
+	// 2.1 Work and Blog Thumbnail hover
+	postIMG.hover(function() {
+		$(this).toggleClass('hover');
+	});
+
+	// 2.2 View more Repos Functions
+	moreRepos.click(function(e) {
+
+		e.preventDefault();
+		
+		var githubAPI = 'https://api.github.com/users/WeebleWobb/repos'
+		var githubOptions = {
+			type: "owner",
+			sort: "created"
+		}
+
+		function showRepos(data) {
+			var repoContainer = $('#repoContainer');
+			repoHTML = '';
+
+			$.each(data, function(i, repo) {
+				repoHTML += '<div class="col-4 repo-flex">';
+				repoHTML += '<article class="repos-post">';
+				repoHTML += '<a href="' + repo.html_url + '" target="_blank"><h6>' + repo.name + '</h6></a>';
+				repoHTML += '<p>' + repo.description + '</p>';
+				repoHTML += '<div class="repos-post-meta">' + repo.language + '</div>';
+				repoHTML += '</article>';
+				repoHTML += '</div>';
+			});
+
+			repoContainer.html(repoHTML);
+
+		}
+
+		$.getJSON(githubAPI, githubOptions, showRepos);
+
+		$(this).hide();
+
+	});
 
 });
 
