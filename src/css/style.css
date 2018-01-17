@@ -22,7 +22,8 @@ a:hover {
 
 .btn-primary {
   background-color: #d54935;
-  border-color: #d54935; }
+  border-color: #d54935;
+  text-decoration: none; }
 
 .btn-primary:hover {
   background-color: #f5a800;
@@ -69,6 +70,34 @@ hr {
 /* ===================================================================
 	02. Navigation
 =================================================================== */
+header.is_about_detail.is_scrolled {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(79, 44, 31, 0.125);
+          box-shadow: 0 5px 15px rgba(79, 44, 31, 0.125);
+  position: fixed;
+  top: 0;
+  z-index: 999; }
+
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes slidein {
+  from {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
 .nav-container {
   position: relative;
   right: 0;
