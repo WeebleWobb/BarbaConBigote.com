@@ -2,6 +2,28 @@
 	02. Navigation
 =================================================================== */
 
+header.is_about_detail.is_scrolled {
+		animation-duration: .5s;
+		animation-name: slidein;
+		background-color: #fff;
+		box-shadow: 0 5px 15px rgba(79, 44, 31, .125);
+		position: fixed;
+		top: 0;
+		z-index: 999;
+
+	@keyframes slidein {
+		from {
+			transform: translateY(-80px);
+		}
+		
+		to {
+			transform: translateY(0);
+		}
+
+	}
+}
+
+
 .nav-container {
 	@include position-relative {
 		height: 93px;
