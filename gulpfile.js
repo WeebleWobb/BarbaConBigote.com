@@ -3,10 +3,17 @@ var
 	// modules
 	gulp = require('gulp'),
 	newer = require('gulp-newer'),
+
+	// HTML
 	imagemin = require('gulp-imagemin'),
 	htmlclean = require('gulp-htmlclean');
+
+	// JS
 	concat = require('gulp-concat'),
   	uglify = require('gulp-uglify'),
+  	jshint = require('gulp-jshint'),
+
+  	// CSS
   	cleanCSS = require('gulp-clean-css'),
   	sass = require('gulp-sass'),
   	maps = require('gulp-sourcemaps'),
@@ -33,9 +40,11 @@ gulp.task('images', function() {
 // JS Minification
 gulp.task('js', function() {
 	return gulp.src(folder.src + 'js/**/*')
-		.pipe(deporder())
-		.pipe(concat('main.js'))
-		.pipe(gulp.dest(folder.build + 'js/'));
+		// .pipe(deporder())
+		.pipe(jshint())
+		.pipe(concat('app.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest(folder.src + 'js/'));
 
 });
 
