@@ -1,15 +1,15 @@
 <?php 
-		
-		$url = 'https://teamtreehouse.com/weeblewobb.json';
+			
+	$url = 'https://teamtreehouse.com/weeblewobb.json';
 
-		$process = curl_init($url);
-		curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
+	$process = curl_init($url);
+	curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
 
-		$return = curl_exec($process);
-		$results = json_decode($return, true);
+	$return = curl_exec($process);
+	$results = json_decode($return, true);
 
 ?>
-<!-- Experience Content -->
+<!-- Life Long Learner Content -->
 <div id="total" class="row my-3">
 	<div class="col-6">
 		<div class="total-points">
@@ -28,20 +28,30 @@
 	</div>
 </div>
 <hr>
+
+<!-- Course Points -->
 <div id="points" class="row">
 	<?php
 
+		function rand_color() {
+		    return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+		}
+
 		$points = $results["points"];
+
 		$points = array_filter($points, function($val, $key) { 
 						return $val !== 0 && $key !== 'total'; 
 					},
 					ARRAY_FILTER_USE_BOTH
 				);
 
+		arsort($points);
+
+
 		foreach ($points as $cat => $num) {
 			echo '<div class="col-3">'
 	  				. '<div class="points">'
-	  					. '<p><span class="circle"></span>' . $cat . '<span class="number">' . $num . '</span></p>'
+	  					. '<p><span style="background-color:' . rand_color() . ';" class="circle"></span>' . $cat . '<span class="number">' . $num . '</span></p>'
 	  				. '</div>'
   				. '</div>';
 		}
@@ -49,6 +59,8 @@
 	?>
 </div>
 <hr>
+
+<!-- Treehouse Badges -->
 <div class="row about-detail-content mt-4">
 
 	<?php
@@ -87,4 +99,4 @@
 	?>
 
 </div>
-<!-- End About Content -->
+<!-- End Life Long Learner Content -->
