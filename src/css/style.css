@@ -836,24 +836,22 @@ ul {
         margin-bottom: 0; }
 
 .points {
-  position: relative;
   margin: .5em 0; }
   .points p {
+    position: relative;
     font-size: .875em;
     margin-bottom: 0;
     margin-left: 12px; }
-    .points p::after {
+    .points p .circle {
       position: absolute;
-      content: '';
       top: 6px;
-      left: 0;
+      left: -12px;
       border-radius: 100%;
       height: 8px;
       width: 8px;
-      background-color: #b4b4b4;
       overflow: hidden; }
     .points p .number {
-      color: #ccc;
+      color: #bbb;
       display: block; }
 
 /*# sourceMappingURL=style.css.map */
