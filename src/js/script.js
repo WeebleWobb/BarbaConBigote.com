@@ -91,5 +91,23 @@ jQuery(document).ready(function($) {
 
 	});
 
+	// --------------------- 03. About --------------------- //
+
+	// 3.1 Treehouse API Ajax function
+	var url = 'https://teamtreehouse.com/weeblewobb.json';
+
+	show_badges(url);
+
+	function show_badges(url) {
+
+		$.getJSON(url, function(data) {
+
+			console.log(data);
+
+		});
+
+	}
+
+
 });
 
