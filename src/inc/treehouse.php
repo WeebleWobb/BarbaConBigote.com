@@ -1,19 +1,4 @@
-<!-- Experience Content -->
-<div class="row my-3">
-	<div class="form-group col-12 col-lg-4">
-		<label for="exampleFormControlSelect1">Filter by Language</label>
-		<select class="form-control" id="exampleFormControlSelect1">
-			<option>All</option>
-			<option>2</option>
-			<option>3</option>
-			<option>4</option>
-			<option>5</option>
-		</select>
-	</div>
-	</div>
-<div class="row about-detail-content">
-
-	<?php 
+<?php 
 		
 		$url = 'https://teamtreehouse.com/weeblewobb.json';
 
@@ -23,19 +8,75 @@
 		$return = curl_exec($process);
 		$results = json_decode($return, true);
 
-		// echo $results["badges"][0]["name"];
+?>
+<!-- Experience Content -->
+<div id="total" class="row my-3">
+	<div class="col-6">
+		<div class="total-points">
+			<h5><span class="color-red">Total Points</span><br>
+				<?php 
 
-		foreach ($results["badges"] as $skill) {
+					$points = $results;
+					$totalPoints = array_column($points, 'total');
+
+					foreach($totalPoints as $total ) {
+							echo $total;
+					}
+				?>
+			</h5>
+		</div>
+	</div>
+</div>
+<hr>
+<div id="points" class="row">
+	<?php
+
+		$points = $results["points"];
+		$points = array_filter($points, function($val, $key) { 
+						return $val !== 0 && $key !== 'total'; 
+					},
+					ARRAY_FILTER_USE_BOTH
+				);
+
+		foreach ($points as $cat => $num) {
+			echo '<div class="col-3">'
+	  				. '<div class="points">'
+	  					. '<p><span class="circle"></span>' . $cat . '<span class="number">' . $num . '</span></p>'
+	  				. '</div>'
+  				. '</div>';
+		}
+
+	?>
+</div>
+<hr>
+<div class="row about-detail-content mt-4">
+
+	<?php
+
+		$results = array_reverse($results["badges"], true);
+
+		foreach ($results as $skill) {
 
 			$date = new DateTime($skill["earned_date"]);
 
-			echo '<div class="col-6 col-lg-4">'
+			if($skill["courses"] != null) {
+				$skillCat = '<p class="small-detail">' . $skill["courses"][0]["title"] . '</p>';
+			} else {
+				$skillCat = '';
+			}
+
+			echo '<div class="col-md-6">'
 					. '<figure class="skill">'
-						. '<img class="img-fluid" src="' . $skill["icon_url"] . '">'
 						. '<figcaption class="skill-caption">'
+							. '<p>Achievement</p>'
 							. '<h6 class="color-red">' . $skill["name"] . '</h6>'
-							. '<p>' . $date->format('m-d-Y') . '</p>'
+							. $skillCat
+							. '<p>Achieved</p>'
+							. '<p class="small-detail">' . $date->format('M d, Y') . '</p>'
 						. '</figcaption>'
+						. '<div class="skill-img">'
+							. '<img class="img-fluid" src="' . $skill["icon_url"] . '">'
+						. '</div>'
 					. '</figure>'
 				. '</div>';
 
