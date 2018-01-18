@@ -782,19 +782,78 @@ ul {
 .is_skills::before, .is_personal::before, .is_contact::before {
   display: none; }
 
-.skill img {
+.is_skills hr {
+  border-color: #ddd;
+  margin: .5em 0; }
+
+.skill {
+  background-color: #fff;
   -webkit-box-shadow: 0 0 15px #d8d8d8;
           box-shadow: 0 0 15px #d8d8d8;
-  padding: 1.5em;
-  background-color: #fff;
-  border-radius: 5px; }
+  border-radius: 5px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px;
+  min-height: 190px; }
+  .skill .skill-img {
+    background-color: #efefef;
+    padding: 1em;
+    overflow: hidden;
+    -webkit-box-flex: 1.125;
+        -ms-flex: 1.125;
+            flex: 1.125;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .skill .skill-img img {
+      -ms-flex-item-align: center;
+          align-self: center; }
+  .skill .skill-caption {
+    padding: 1em;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3; }
+    .skill .skill-caption h6 {
+      font-size: 1em;
+      margin-bottom: 5px; }
+    .skill .skill-caption p {
+      font-size: .875em;
+      margin-bottom: 0; }
+    .skill .skill-caption .small-detail {
+      color: #ccc;
+      font-size: .75em;
+      margin-bottom: 5px;
+      line-height: 1.25; }
+      .skill .skill-caption .small-detail:last-child {
+        margin-bottom: 0; }
 
-.skill .skill-caption {
-  padding: 1em 0; }
-  .skill .skill-caption h6 {
-    font-size: 1em;
-    margin-bottom: 0; }
-  .skill .skill-caption p {
-    font-size: .875em; }
+.points {
+  position: relative;
+  margin: .5em 0; }
+  .points p {
+    font-size: .875em;
+    margin-bottom: 0;
+    margin-left: 12px; }
+    .points p::after {
+      position: absolute;
+      content: '';
+      top: 6px;
+      left: 0;
+      border-radius: 100%;
+      height: 8px;
+      width: 8px;
+      background-color: #b4b4b4;
+      overflow: hidden; }
+    .points p .number {
+      color: #ccc;
+      display: block; }
 
 /*# sourceMappingURL=style.css.map */
