@@ -68,7 +68,7 @@
 	<div class="col-6 text-right">
 		<?php
 
-			echo '<a class="btn-scondary" href="' . $results["profile_url"] . '">View Full Profile <i class="fas fa-long-arrow-alt-right"></i></a>'
+			echo '<a class="btn-scondary" href="' . $results["profile_url"] . '" target="_blank">View Full Profile <i class="fas fa-long-arrow-alt-right"></i></a>'
 
 		?>
 	</div>
