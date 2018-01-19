@@ -1,3 +1,13 @@
+<?php 
+	
+	$clientId = 'B443B328112B2CE689823416FBBE03353B9497F0';
+	$clientSecret = 'F6C3122C0EE5975CC3535EDCB908319116651F5D';
+	$url = 'https://api.untappd.com/v4/method_name?client_id=' . $clientId . '&client_secret=' . $clientSecret;
+
+	$process = curl_init($url);
+
+?>
+
 <!-- Personal Content -->
 <div class="row my-3">
 	<div class="col-12">
