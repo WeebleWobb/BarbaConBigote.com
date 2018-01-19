@@ -62,10 +62,22 @@
 
 <!-- Treehouse Badges -->
 <div class="row about-detail-content mt-4">
+	<div class="col-6 mb-3">
+		<h5 class="color-red">Latest Badges</h5>
+	</div>
+	<div class="col-6 text-right">
+		<?php
+
+			echo '<a class="btn-scondary" href="' . $results["profile_url"] . '">View Full Profile <i class="fas fa-long-arrow-alt-right"></i></a>'
+
+		?>
+	</div>
 
 	<?php
 
 		$results = array_reverse($results["badges"], true);
+
+		$i = 0;
 
 		foreach ($results as $skill) {
 
@@ -91,6 +103,10 @@
 						. '</div>'
 					. '</figure>'
 				. '</div>';
+
+			$i++;
+
+			if($i == 10) break;
 
 		}
 
