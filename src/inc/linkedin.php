@@ -11,6 +11,8 @@
 
 <?php 
 	
+	// Still considering to utilize LinkedIn API
+		
 	$url = 'https://api.linkedin.com/v1/people/~:(positions)?format=json';
 
 	$clientId = '782oiymnk1mkyj';
@@ -25,16 +27,6 @@
 
 	$return = curl_exec($process);
 	$results = json_decode($return, true);
-
-
-	foreach($results["positions"] as $position) {
-
-		echo $position["values"]["title"];
-
-	}
-
-
-	var_dump($results);
 
 	curl_close($process);
 ?>
