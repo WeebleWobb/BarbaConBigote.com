@@ -1,12 +1,18 @@
 <?php 
-			
+	
+	// Stores API URL
 	$url = 'https://teamtreehouse.com/weeblewobb.json';
 
+	// Creates cURL init
 	$process = curl_init($url);
 	curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
 
+	// Executes and stroes data
 	$return = curl_exec($process);
 	$results = json_decode($return, true);
+
+	// Closed request
+	curl_close($process);
 
 ?>
 <!-- Life Long Learner Content -->
@@ -109,8 +115,6 @@
 			if($i == 10) break;
 
 		}
-
-		curl_close($process);
 
 	?>
 
