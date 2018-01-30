@@ -21,7 +21,7 @@
 		.		 '<h3>Current Repositories (' . count($results) . ')</h3>'
 		.	 '</div>'
 		.	'<div class="col-12 col-md-6 text-right align-self-center">'
-		.		'<a href="https://github.com/WeebleWobb" target="_blank">View GitHub Profile</a>'
+		.		'<a href="https://github.com/WeebleWobb" target="_blank">View GitHub Profile <i class="fas fa-long-arrow-alt-right"></i></a>'
 		.	'</div>'
 		. '</div>'
 		. '<div id="repoContainer" class="row">';
