@@ -1,37 +1,71 @@
 <?php 
 	
+	// Untappd App Information
 	$clientId = 'B443B328112B2CE689823416FBBE03353B9497F0';
 	$clientSecret = 'F6C3122C0EE5975CC3535EDCB908319116651F5D';
-	$url = 'https://api.untappd.com/v4/user/checkins/WeebleWobb?client_id=' . $clientId . '&client_secret=' . $clientSecret;
+	$url1 = 'https://api.untappd.com/v4/user/checkins/WeebleWobb?client_id=' . $clientId . '&client_secret=' . $clientSecret;
+	$url2 = 'https://api.untappd.com/v4/user/info/WeebleWobb?client_id=' . $clientId . '&client_secret=' . $clientSecret;
 
-	$process = curl_init($url);
+	// Creates the cURL init
+	$process1 = curl_init($url1);
+	$process2 = curl_init($url2);
 
-	curl_setopt_array($process, array(
-		CURLOPT_RETURNTRANSFER => 1,
-	));
+	// Sets up cURL options
+	curl_setopt($process1, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($process2, CURLOPT_RETURNTRANSFER, 1);
 
-	$return = curl_exec($process);
-	$results = json_decode($return, true);
+	// Creates the multi cURL init and add the handles
+	$mh = curl_multi_init();
 
-	$total = $results["response"]["checkins"]["count"];
-	$checkins = $results["response"]["checkins"]["items"];
+	curl_multi_add_handle($mh,$process1);
+	curl_multi_add_handle($mh,$process2);
 
-	// var_dump($checkins);
+	// Exucutes the multi cURL request
+	$active = null;
+
+	do {
+		$return = curl_multi_exec($mh, $active);
+	} while ($active);
+
+	// Removes and closes the handles and request
+	curl_multi_remove_handle($mh, $process1);
+	curl_multi_remove_handle($mh, $process2);
+	curl_multi_close($mh);
+
+	// Gets content and decodes
+	$return1 = curl_multi_getcontent($process1);
+	$return2 = curl_multi_getcontent($process2);
+
+	$results1 = json_decode($return1, true);
+	$results2 = json_decode($return2, true);
+
+	$total = $results1["response"]["checkins"]["count"];
+	$checkins = $results1["response"]["checkins"]["items"];
+	$stats = $results2["response"]["user"]["stats"];
+	
+	// print_r($results2);
 ?>
 
 <div class="row about-detail-content">
+	<div class="col-12 mb-3">
+		<h5 class="color-red">Latest Check-ins from <a href="https://untappd.com/" target="_blank">Untappd</a></h5>
+	</div>
 	<div class="col-12 col-lg-9">
 
 		<?php
+			
+			$i = 0;
 
 			foreach($checkins as $checkin) {
+
+				$photo = $checkin["media"]["items"][0]["photo"]["photo_img_sm"];
 
 				$date = new DateTime($checkin["created_at"]);
 
 				echo '<article class="brew">'
 					.	'<header class="brew-head">'
 					.		'<div class="media">'
-					.			'<img class="mr-3 img-fluid" src="' . $checkin["beer"]["beer_label"] .  '">'
+					.			'<img class="mr-3 img-fluid" src="' . $photo .  '">'
 					.			'<div class="media-body">'
 					.				'<h6 class="color-red">' . $checkin["beer"]["beer_name"] . '</h6>'
 					.				'<p>' . $checkin["brewery"]["brewery_name"] . '</p>'
@@ -44,12 +78,15 @@
 					.	'</div>'
 					.	'<footer class="brew-meta">'
 					.		'<ul>'
-					.			'<li>' . $checkin["beer"]["beer_abv"] . '</li>'
-					.			'<li>' . $checkin["rating_score"] . '</li>'
-					.			'<li> Check-in at: ' . $date->format('M d, Y') . '</li>'
+					.			'<li>' . $checkin["beer"]["beer_abv"] . '% ABV</li>'
+					.			'<li>Rating: ' . $checkin["rating_score"] . '/5</li>'
+					.			'<li> Checked-in at: ' . $date->format('M d, Y') . '</li>'
 					.		'</ul>'
 					.	'</footer>'
 					. '</article>';
+
+				$i++;
+				if($i == 6) break;
 
 			}
 
@@ -58,33 +95,26 @@
 
 	<aside class="col-3 brew-stats-container">
 		<div class="brew-stats">
-			<h6>120</h6>
+			<h6><?php echo $stats["total_badges"] ?></h6>
 			<p>Badges</p>
 		</div>
 		<div class="brew-stats">
-			<h6>320</h6>
+			<h6><?php echo $stats["total_friends"] ?></h6>
 			<p>Friends</p>
 		</div>
 		<div class="brew-stats">
-			<h6>1023</h6>
+			<h6><?php echo $stats["total_checkins"] ?></h6>
 			<p>Unique Check-ins</p>
 		</div>
 		<div class="brew-stats">
-			<h6>2045</h6>
+			<h6><?php echo $stats["total_beers"] ?></h6>
 			<p>Total Beers</p>
 		</div>
 		<div class="brew-stats">
-			<h6>567</h6>
+			<h6><?php echo $stats["total_photos"] ?></h6>
 			<p>Photos</p>
 		</div>
 	</aside>
 
-<?php
-
-	curl_close($process);
-
-?>
-
-<!-- Personal Content -->
 </div>
 <!-- End About Content -->
