@@ -11,8 +11,24 @@
 
 <?php 
 	
+	// Still considering utilizing LinkedIn API
+		
+	$url = 'https://api.linkedin.com/v1/people/~:(positions)?format=json';
+
 	$clientId = '782oiymnk1mkyj';
 	$clientSecret = 'RTaXgbd3qEKu9QLH';
+
+	$auth = 'Authorization: Bearer AQUk7jorh-gaZ011mMy_gvi5TeNkqgIFogkVLLcRcDOPIv-c9hDwfYPVz711KoZ7aKd2zdhCtLfNe1AEXfZQDRNu15tZMARc27e1YUqkCRKtVuIRg4yf1KfE9TIRQK5GTS7N5hlpQ4VWxEBsy-4opaX8PGFUqBIQuNcbgPFWcasYpjbXe7wmNNe5klXTRkzvRTwdoAVL70rBMnskGt98ypAMdRiIyB90VNlnYSdAhEiddciiIokCBfv5XtkAsqQK2K1Vr-LUbmjF4O3K7JTnLsL_hBTMi0gsoQDp6vguErdghBlURf4Q0SmnJOjXCwMyByQMi_JE9y_IU5br-EJ6iNeduThc-Q';
+
+	$process = curl_init($url);
+	curl_setopt($process, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $auth ));
+	curl_setopt($process, CURLOPT_CUSTOMREQUEST, "GET");
+	curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
+
+	$return = curl_exec($process);
+	$results = json_decode($return, true);
+
+	curl_close($process);
 ?>
 
 <!-- About Content will be pulled from LinkedIn API -->
@@ -32,3 +48,4 @@
 	</div>
 <?php endif; ?> 
 <!-- End About Content -->
+
