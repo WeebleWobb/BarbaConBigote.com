@@ -20,9 +20,9 @@
 	<!-- End Process Content -->
 
 <!-- Personal Section -->
-<?php } elseif(is_single('personal')) { 
+<?php } elseif(is_single('personal')) {
 
-	include('untappd.php'); 
+		include('untappd.php');
 
 ?>
 
