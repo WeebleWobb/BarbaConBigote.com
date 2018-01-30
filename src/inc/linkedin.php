@@ -11,7 +11,7 @@
 
 <?php 
 	
-	// Still considering to utilize LinkedIn API
+	// Still considering utilizing LinkedIn API
 		
 	$url = 'https://api.linkedin.com/v1/people/~:(positions)?format=json';
 

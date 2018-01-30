@@ -50,9 +50,9 @@
 
 		foreach ($points as $cat => $num) {
 			echo '<div class="col-3">'
-	  				. '<div class="points">'
-	  					. '<p><span style="background-color:' . rand_color() . ';" class="circle"></span>' . $cat . '<span class="number">' . $num . '</span></p>'
-	  				. '</div>'
+	  			.	 '<div class="points">'
+	  			.		 '<p><span style="background-color:' . rand_color() . ';" class="circle"></span>' . $cat . '<span class="number">' . $num . '</span></p>'
+	  			.	 '</div>'
   				. '</div>';
 		}
 
@@ -90,18 +90,18 @@
 			}
 
 			echo '<div class="col-md-6">'
-					. '<figure class="skill">'
-						. '<figcaption class="skill-caption">'
-							. '<p>Achievement</p>'
-							. '<h6 class="color-red">' . $skill["name"] . '</h6>'
-							. $skillCat
-							. '<p>Achieved</p>'
-							. '<p class="small-detail">' . $date->format('M d, Y') . '</p>'
-						. '</figcaption>'
-						. '<div class="skill-img">'
-							. '<img class="img-fluid" src="' . $skill["icon_url"] . '">'
-						. '</div>'
-					. '</figure>'
+				.	 '<figure class="skill">'
+				.		 '<figcaption class="skill-caption">'
+				.			 '<p>Achievement</p>'
+				.			 '<h6 class="color-red">' . $skill["name"] . '</h6>'
+				.				$skillCat
+				.			 '<p>Achieved</p>'
+				.			 '<p class="small-detail">' . $date->format('M d, Y') . '</p>'
+				.		 '</figcaption>'
+				.		 '<div class="skill-img">'
+				.			 '<img class="img-fluid" src="' . $skill["icon_url"] . '">'
+				.		 '</div>'
+				.	 '</figure>'
 				. '</div>';
 
 			$i++;
