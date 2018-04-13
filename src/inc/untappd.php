@@ -58,7 +58,12 @@
 
 			foreach($checkins as $checkin) {
 
-				$photo = $checkin["media"]["items"][0]["photo"]["photo_img_sm"];
+				// Checks to see if there is an image with the Check-in, if not uses placeholder
+				if(empty($checkin["media"]["items"])) {
+					$photo = get_template_directory_uri() . '/assets/beer-placeholder.png';
+				} else {
+					$photo = $checkin["media"]["items"][0]["photo"]["photo_img_sm"];
+				}
 
 				$date = new DateTime($checkin["created_at"]);
 

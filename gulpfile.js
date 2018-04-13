@@ -17,7 +17,10 @@ var
   	cleanCSS = require('gulp-clean-css'),
   	sass = require('gulp-sass'),
   	maps = require('gulp-sourcemaps'),
-  	autoprefixer = require('gulp-autoprefixer'),
+	autoprefixer = require('gulp-autoprefixer'),
+	  
+	// Dist Clean
+	del = require('del'),
 
 	// folders
 	folder = {
@@ -63,4 +66,14 @@ gulp.task('watchSass', function() {
   gulp.watch(folder.src + 'scss/**/*.scss', ['compileSass']);
 })
 
-gulp.task('build', ['images', 'js', 'sass'], function() { });
+// Build to dist task 
+gulp.task('build', ['images', 'jshint', 'jsUglify', 'compileSass', 'cssMinify'], function() { 
+	return gulp.src(['src/assets/*', 'src/*.php', 'src/inc/*.php', 'src/screenshot.png'], { base: 'src/'})
+		.pipe(gulp.dest(folder.build)
+	);
+});	
+
+// Default gulp task
+gulp.task('default', ['clean'], function() {
+	gulp.start('build');
+});
