@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
 <main role="main">
-	
-	
-	
 	<section class="container about-detail-aspot">
 		<div class="row">
 			<div class="col-12 col-md-8 offset-md-2">
@@ -14,8 +11,8 @@
 						<hr>
 						<?php the_content(); ?>
 
-						<div class="contact">
-							<h5 class="color-grey">Juan D. Bola&ntilde;os</h5>
+						<div class="contact mt-4">
+							<h6 class="color-grey">Juan D. Bola&ntilde;os</h6>
 							<a href="#">hola@barbaconbigote.com</a>
 						</div>
 
@@ -28,8 +25,6 @@
 			</div>
 		</div>
 	</section>
-
-	
 
 	<!-- Content -->
 	<section class="container-fluid about-detail-container is_contact">

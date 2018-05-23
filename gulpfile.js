@@ -1,5 +1,8 @@
 // Gulp.js configuration
 var
+	// development mode?
+	devBuild = (process.env.NODE_ENV !== 'production'),
+
 	// modules
 	gulp = require('gulp'),
 	newer = require('gulp-newer'),

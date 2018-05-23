@@ -10,7 +10,6 @@
 					<ul class="nav justify-content-end">
 						<li class="nav-item"><a class="nav-link" href="work.php">Work</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-						<li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
 						<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
 					</ul>
 				</div>

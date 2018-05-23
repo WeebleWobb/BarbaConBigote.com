@@ -632,13 +632,12 @@ ul {
     position: relative; }
     .about-detail-container::before {
       content: "";
-      /* position: absolute; */
+      position: absolute;
       top: -10em;
       left: 0;
       background-color: #fff;
       width: 33.333333%;
-      height: 100vh;
-      } }
+      height: 100vh; } }
 
 .about-detail-content:nth-child(even) .about-content-right {
   background-color: #f9f9f9; }
