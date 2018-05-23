@@ -1,3 +1,7 @@
+# Temp Hosted and SQL data Files
+temp/
+_data/
+
 # Node Modules #
 ################
 node_modules/
