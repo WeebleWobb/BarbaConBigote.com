@@ -6,7 +6,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-md-6 offset-md-3 mt-md-5">
-					<h1 class="text-center color-charcoal py-4">Case Studies and Repositories.</h1>
+					<h1 class="text-center color-charcoal py-4">Case Studies and Other Works.</h1>
 				</div>
 			</div>
 		</div>
@@ -66,21 +66,42 @@
 
 		</div>
 	</section>
-	<!-- End Featured Work -->
 
-	<!-- Repositories -->
-	<section class="repos container">
+	<!-- Other Work -->
+	<section class="other-work container">
 
-		<?php include('inc/github.php'); ?>
+		<h3>Other Works and Repositories</h3>
 
-		<div class="row">
-			<div class="col-12 text-center mt-3">
-				<a id="more-repos" href="#" class="btn btn-primary">View All Repos</a>
-			</div> 
+		<ul class="nav nav-tabs" id="other-works" role="tablist">
+			<li class="nav-item">
+				<a href="#uxui" class="nav-link active" id="uxui-tab" data-toggle="tab" role="tab" aria-contols="uxui" aria-selected="true">UX/UI</a>
+			</li>
+			<li class="nav-item">
+				<a href="#posters" class="nav-link" id="posters-tab" data-toggle="tab" role="tab" aria-contols="posters" aria-selected="false">Posters</a>
+			</li>
+			<li class="nav-item">
+				<a href="#infographics" class="nav-link" id="infographics-tab" data-toggle="tab" role="tab" aria-controls="infographics" aria-selected="false">Infographics</a>
+			</li>
+			<li class="nav-item">
+				<a href="#branding" class="nav-link" id="branding-tab" data-toggle="tab" role="tab" aria-controls="branding" aria-selected="false">Branding</a>
+			</li>
+			<li class="nav-item">
+				<a href="#repos" class="nav-link" id="repos-tab" data-toggle="tab" role="tab" aria-contols="repositories" aria-selected="false">Repositories</a>
+			</li>
+		</ul>
+		
+		<div class="tab-content" id="other-worksContent">
+			
+				<?php include('inc/ux-ui.php'); ?>
+				<?php include('inc/posters.php'); ?>
+				<?php include('inc/infographics.php'); ?>
+				<?php include('inc/branding.php'); ?>
+				<?php include('inc/github.php'); ?>
+
 		</div>
-
+		
 	</section>
-	<!-- End of Repositories -->
+
 </main>
 
 <?php get_footer(); ?>

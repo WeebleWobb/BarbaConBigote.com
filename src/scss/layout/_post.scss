@@ -2,14 +2,6 @@
 	05. Work and Post
 =================================================================== */
 .repos {
-	display: none;
-
-	@include media('md') {
-		display: block;
-		margin-top: 3em;
-		margin-bottom: 5em;
-	}
-
 	.repo-flex {
 		display: flex;
 		align-items: stretch;
@@ -24,7 +16,35 @@
 	}
 
 	.repos-post-meta {
-		margin-top: 2em;
+		margin-top: 1.125em 2em;
+	}
+}
+
+.other-work {
+	margin-top: 5em;
+	margin-bottom: 5em;
+
+	h3 {
+		margin-bottom: 1.125em;
+	}
+
+	& .nav .nav-item .nav-link {
+		padding: 1.125em 2em;
+		color: $charcoal;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1em;
+
+		&.active {
+			background-color: #e2e2e2;
+			border-radius: 0;
+			border-color: #d4d4d4;
+			border-bottom: none;
+		}
+	}
+
+	& .tab-content {
+		padding-top: 2.5em;
 	}
 }
 
@@ -38,7 +58,7 @@
 
 .work-caption, .post-caption {
 	@include position-relative {
-		background-color: $grey;
+		background-color: #fff;
 		text-align: left;
 		padding: .75em 1em;
 		@include rounded-bottom-corners;
