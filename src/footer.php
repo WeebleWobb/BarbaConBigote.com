@@ -8,9 +8,20 @@
 				</div>
 				<div class="col-md-7 footer-nav">
 					<ul class="nav justify-content-end">
-						<li class="nav-item"><a class="nav-link" href="work.php">Work</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-						<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+						<?php 
+							$menu_items = wp_get_nav_menu_items('Main Nav');
+
+							foreach($menu_items as $menu_item) {
+								$title = $menu_item->title;
+								$url = $menu_item->url;
+
+								$link = '<li class="nav-item">';
+								$link .= '<a class="nav-link" href="' . $url . '">' . $title . '</a>';
+								$link .= '</li>';
+
+								echo $link;
+							}
+						?>
 					</ul>
 				</div>
 			</div>
