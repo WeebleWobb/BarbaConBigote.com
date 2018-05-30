@@ -47,6 +47,13 @@
         }
     }
 
+    &--img {
+
+        img {
+            box-shadow: $work-shadow;
+        }
+    }
+
     &--number {
         text-align: right;
         color: $red;
@@ -59,5 +66,30 @@
             float:right;
         }
     }
-    
+}
+
+.otherwork {
+
+    &-aspot {
+        padding-top: 3em;
+        text-align: center;
+    }
+
+    &--container {
+        margin-top: .5em;
+        margin-bottom: 5em;
+
+        .ux-ui div + div {
+            margin-top: 5em;
+        }
+    }
+
+    &--img {
+        margin-top: 2.5em;
+
+        img {
+            box-shadow: $work-shadow;
+        }
+    }
+
 }

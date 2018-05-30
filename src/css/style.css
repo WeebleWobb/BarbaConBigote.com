@@ -907,6 +907,10 @@ ul {
     margin-top: 2.5em;
     margin-bottom: 2.5em; }
 
+.casestudy--img img {
+  -webkit-box-shadow: 0 0 20px #dbdbdb;
+          box-shadow: 0 0 20px #dbdbdb; }
+
 .casestudy--number {
   text-align: right;
   color: #d54935; }
@@ -915,5 +919,21 @@ ul {
   margin-bottom: 4em; }
   .casestudy-pagination--next {
     float: right; }
+
+.otherwork-aspot {
+  padding-top: 3em;
+  text-align: center; }
+
+.otherwork--container {
+  margin-top: .5em;
+  margin-bottom: 5em; }
+  .otherwork--container .ux-ui div + div {
+    margin-top: 5em; }
+
+.otherwork--img {
+  margin-top: 2.5em; }
+  .otherwork--img img {
+    -webkit-box-shadow: 0 0 20px #dbdbdb;
+            box-shadow: 0 0 20px #dbdbdb; }
 
 /*# sourceMappingURL=style.css.map */
