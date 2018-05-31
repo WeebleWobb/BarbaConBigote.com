@@ -896,7 +896,8 @@ ul {
 
 .casestudy--carousel {
   background-color: #e4e4e4;
-  height: 600px; }
+  height: auto;
+  overflow: hidden; }
 
 .casestudy--container {
   margin-top: 5em;
@@ -910,6 +911,10 @@ ul {
 .casestudy--img img {
   -webkit-box-shadow: 0 0 20px #dbdbdb;
           box-shadow: 0 0 20px #dbdbdb; }
+
+.casestudy--img figcaption p {
+  text-align: center;
+  font-weight: bold; }
 
 .casestudy--number {
   text-align: right;

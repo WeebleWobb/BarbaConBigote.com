@@ -30,7 +30,8 @@
 
     &--carousel {
         background-color: #e4e4e4;
-        height: 600px;
+        height: auto;
+        overflow: hidden;
     }
 
     &--container {
@@ -51,6 +52,11 @@
 
         img {
             box-shadow: $work-shadow;
+        }
+
+        figcaption p {
+            text-align: center;
+            font-weight: bold;
         }
     }
 

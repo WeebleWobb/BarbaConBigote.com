@@ -1,3 +1,11 @@
+<?php 
+
+/*
+    Template Name: Other Work: UX/UI
+*/
+
+?>
+
 <?php get_header(); ?>
 
 	<main role="main">
