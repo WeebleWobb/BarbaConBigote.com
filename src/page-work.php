@@ -92,11 +92,11 @@
 		
 		<div class="tab-content" id="other-worksContent">
 			
-				<?php include('inc/ux-ui.php'); ?>
-				<?php include('inc/posters.php'); ?>
-				<?php include('inc/infographics.php'); ?>
-				<?php include('inc/branding.php'); ?>
-				<?php include('inc/github.php'); ?>
+				<?php include('inc/otherworks/ux-ui.php'); ?>
+				<?php include('inc/otherworks/posters.php'); ?>
+				<?php include('inc/otherworks/infographics.php'); ?>
+				<?php include('inc/otherworks/branding.php'); ?>
+				<?php include('inc/otherworks/github.php'); ?>
 
 		</div>
 		

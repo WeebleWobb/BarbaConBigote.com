@@ -63,7 +63,7 @@ function barba_theme_scripts() {
 add_action('wp_enqueue_scripts', 'barba_theme_scripts');
 
 /* ===========================================================
-Custo Color WYSIWYG function
+Custom Color WYSIWYG function
 ============================================================== */
 
 function custom_color_options($init) {
