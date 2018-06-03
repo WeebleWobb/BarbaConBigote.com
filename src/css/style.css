@@ -868,4 +868,83 @@ ul {
       color: #bbb;
       display: block; }
 
+.casestudy-aspot {
+  position: relative;
+  margin-top: 3em;
+  margin-bottom: 4em; }
+  .casestudy-aspot .disclaimer {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+    background-color: #d54935;
+    width: 100vw;
+    padding: 1em 0;
+    text-align: center;
+    font-size: .875em;
+    font-weight: 600;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #efefef;
+    z-index: 999; }
+    .casestudy-aspot .disclaimer-show {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+              transform: translateY(0); }
+
+.casestudy--carousel {
+  background-color: #e4e4e4;
+  height: auto;
+  overflow: hidden; }
+
+.casestudy--container {
+  margin-top: 5em;
+  margin-bottom: 5em; }
+  .casestudy--container.container-fluid {
+    padding: 0; }
+  .casestudy--container .row {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em; }
+
+.casestudy--img img {
+  -webkit-box-shadow: 0 0 20px #dbdbdb;
+          box-shadow: 0 0 20px #dbdbdb; }
+
+.casestudy--img figcaption p {
+  text-align: center;
+  font-weight: bold; }
+
+.casestudy--number {
+  text-align: right;
+  color: #d54935; }
+
+.casestudy-pagination {
+  margin-bottom: 4em; }
+  .casestudy-pagination--next {
+    float: right; }
+
+.otherwork-aspot {
+  padding-top: 3em;
+  text-align: center; }
+
+.otherwork--container {
+  margin-top: .5em;
+  margin-bottom: 5em; }
+  .otherwork--container .ux-ui div + div {
+    margin-top: 5em; }
+
+.otherwork--img {
+  margin-top: 2.5em; }
+  .otherwork--img img {
+    -webkit-box-shadow: 0 0 20px #dbdbdb;
+            box-shadow: 0 0 20px #dbdbdb; }
+
+.otherwork figcaption p {
+  text-align: center;
+  font-weight: bold;
+  color: #d54935;
+  margin-bottom: 1em; }
+
 /*# sourceMappingURL=style.css.map */

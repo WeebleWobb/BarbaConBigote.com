@@ -91,6 +91,23 @@ jQuery(document).ready(function($) {
 
 	});
 
+	// 2.3 Case Studies Disclaimer Function
+	window.onload = function() {
+
+		var $disclaimer = $('#js-disclaimer');
+		var $agree = $('.js-agree');
+
+		if($disclaimer.length) {
+			$disclaimer.addClass('disclaimer-show');
+		}
+
+		$agree.click(function(e) {
+			e.preventDefault();
+			$disclaimer.removeClass('disclaimer-show');
+		});
+		
+	}
+
 	// --------------------- 03. About --------------------- //
 
 	// 3.1 Treehouse API Ajax function
