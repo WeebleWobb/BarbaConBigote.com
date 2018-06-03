@@ -20,7 +20,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-3">
                 <figure class="work">
                     <div class="work-img">
-                        <img class="img-fluid" src="https://placehold.it/370x250">
+                        <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid']); ?>
                         <div class="work-hover">
                             <a class="btn btn-primary" href="<?php the_permalink(); ?>">View Work</a>
                         </div>

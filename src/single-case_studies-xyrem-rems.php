@@ -52,7 +52,7 @@
 						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/rems/treating-adults-flow.png">
 					</figure>
 					<figure class="col-12 col-md-6 my-5">
-						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/rems/adults-pediatris-flow.png">
+						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/rems/caregiver-flow.png">
 					</figure>
 				</div>
 				<!-- Details -->

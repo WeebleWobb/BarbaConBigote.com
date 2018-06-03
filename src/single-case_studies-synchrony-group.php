@@ -43,10 +43,10 @@
 				<!-- Image Row -->
 				<div class="row">
 					<figure class="col-12 col-md-4 casestudy--img">
-						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/sg/potential-hire.jpg">
+						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/sg/potential-hire.png">
 					</figure>
 					<figure class="col-12 col-md-4 offset-md-2 casestudy--img">
-						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/sg/potential-client.jpg">
+						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/sg/potential-client.png">
 					</figure>
 					<figure class="col-12 col-md-5 offset-md-1 my-5">
 						<img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/sg/userflow-persona-1.png">

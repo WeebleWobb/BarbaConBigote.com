@@ -941,4 +941,10 @@ ul {
     -webkit-box-shadow: 0 0 20px #dbdbdb;
             box-shadow: 0 0 20px #dbdbdb; }
 
+.otherwork figcaption p {
+  text-align: center;
+  font-weight: bold;
+  color: #d54935;
+  margin-bottom: 1em; }
+
 /*# sourceMappingURL=style.css.map */
