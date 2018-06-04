@@ -43,7 +43,7 @@
 	$checkins = $results1["response"]["checkins"]["items"];
 	$stats = $results2["response"]["user"]["stats"];
 	
-	// print_r($results2);
+	//print_r($results2);
 ?>
 
 <div class="row about-detail-content">
@@ -109,7 +109,7 @@
 		</div>
 		<div class="brew-stats">
 			<h6><?php echo $stats["total_checkins"] ?></h6>
-			<p>Unique Check-ins</p>
+			<p>Unique <br>Check-ins</p>
 		</div>
 		<div class="brew-stats">
 			<h6><?php echo $stats["total_beers"] ?></h6>
