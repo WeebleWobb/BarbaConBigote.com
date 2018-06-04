@@ -5,7 +5,7 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-md-6 offset-md-3 mt-md-5">
+				<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-md-5">
 					<h1 class="text-center color-charcoal py-4">Case Studies and Other Works.</h1>
 				</div>
 			</div>
