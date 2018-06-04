@@ -1,4 +1,4 @@
-<?php if(is_page('work') || is_home() || is_single()) { ?>
+<?php if(is_page('work') || is_home() || is_singular(array('case_studies', 'other_works'))) { ?>
  
 	<footer class="footer">
 		<div class="container">
