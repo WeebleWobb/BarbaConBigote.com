@@ -703,6 +703,8 @@ ul {
     .brew .brew-head p {
       margin-bottom: 0;
       font-size: .75em; }
+    .brew .brew-head img {
+      width: 100px; }
   .brew .brew-body {
     padding: .5em 1em .5em; }
   .brew .brew-meta {
