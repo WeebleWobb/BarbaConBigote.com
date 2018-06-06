@@ -8,7 +8,7 @@
                     array(
                         'taxonomy'  =>      'project_type',
                         'field'     =>      'slug',
-                        'terms'     =>      'ux/ui'
+                        'terms'     =>      'ux-ui'
                     )
                 )
             );
