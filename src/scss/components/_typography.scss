@@ -1,0 +1,81 @@
+/* ===================================================================
+	03. Typography
+=================================================================== */
+
+body {
+	font-size: 100%;
+	font-family: 'Signika Negative', sans-serif;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 2.625em;
+	font-weight: 700;
+
+	@include media('md') {
+		font-size: 3.75em;
+	}
+}
+
+h2 {
+	font-size: 2.25em;
+	font-weight: 700;
+
+	@include media('md') {
+		font-size: 3em;
+	}
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: 700;
+	
+	@include media('md') {
+		font-size: 2.25em;
+	}
+}
+
+h4 {
+	font-size: 1.625em;
+	font-weight: 600;
+
+	@include media('md') {
+		font-size: 2em;
+	}
+}
+
+h5 {
+	font-size: 1.3125em;
+	font-weight: 700;
+
+	@include media('md') {
+		font-size: 1.75em;
+	}
+}
+
+h6 {
+	font-size: 1.125em;
+	font-weight: 600;
+
+	@include media('md') {
+		font-size: 1.3125em;
+	}
+}
+
+p {
+	font-size: .875em;
+	font-weight: 400;
+	margin-bottom: 5px;
+
+	@include media('md') {
+		font-size: 1em;
+	}
+}
+
+ul {
+	font-size: .875em;
+
+	@include media('md') {
+		font-size: 1em;
+	}
+}
