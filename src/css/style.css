@@ -331,8 +331,7 @@ p {
       font-size: 1em; } }
 
 ul {
-  font-size: .875em;
-  padding-left: 1em; }
+  font-size: .875em; }
   @media (min-width: 768px) {
     ul {
       font-size: 1em; } }
@@ -686,6 +685,15 @@ ul {
 
 .about-detail-labels > div:last-child {
   background-color: #f5a800; }
+  .about-detail-labels > div:last-child h6 {
+    display: inline-block; }
+  .about-detail-labels > div:last-child a {
+    display: block;
+    margin-top: 12px;
+    color: #efefef;
+    float: right; }
+    .about-detail-labels > div:last-child a:hover {
+      color: #4f2c1f; }
 
 .about-detail-labels h6 {
   font-weight: 400;
