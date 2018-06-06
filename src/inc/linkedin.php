@@ -5,6 +5,7 @@
 	</div>
 	<div class="col-8 color-grey">
 		<h6>Resum&eacute;</h6>
+		<a href="https://www.linkedin.com/in/bolanosjd/" target="_blank">View Linkedin Profile</a>
 	</div>
 </div>
 <!-- End Labels -->
