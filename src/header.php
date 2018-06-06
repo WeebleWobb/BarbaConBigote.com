@@ -52,7 +52,7 @@
 		?>
 		<div class="contact">
 			<h5 class="color-grey">Get in Touch</h5>
-			<a href="#">hola@barbaconbigote.com</a>
+			<a href="mailto:hola@barbaconbigote.com">hola@barbaconbigote.com</a>
 		</div>
 	</nav>
 </header>
