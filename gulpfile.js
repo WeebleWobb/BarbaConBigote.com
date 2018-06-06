@@ -70,8 +70,8 @@ gulp.task('watchSass', function() {
 })
 
 // Build to dist task 
-gulp.task('build', ['images', 'jshint', 'jsUglify', 'compileSass', 'cssMinify'], function() { 
-	return gulp.src(['src/assets/*', 'src/*.php', 'src/inc/*.php', 'src/screenshot.png'], { base: 'src/'})
+gulp.task('build', ['images', 'js', 'compileSass'], function() { 
+	return gulp.src(['src/assets/*', 'src/*.php', 'src/inc/*', 'src/screenshot.png', 'src/css/style.css'], { base: 'src/'})
 		.pipe(gulp.dest(folder.build)
 	);
 });	
