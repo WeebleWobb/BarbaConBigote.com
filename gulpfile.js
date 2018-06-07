@@ -48,9 +48,9 @@ gulp.task('js', function() {
 	return gulp.src(folder.src + 'js/**/*')
 		// .pipe(deporder())
 		.pipe(jshint())
-		.pipe(concat('app.js'))
+		.pipe(concat('script.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest(folder.src + 'js/'));
+		.pipe(gulp.dest(folder.build + 'js/'));
 
 });
 
