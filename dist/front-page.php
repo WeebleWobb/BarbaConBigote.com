@@ -21,7 +21,7 @@
 					<div id="featuredWork" class="carousel slide" data-ride="carousel" data-interval="6000">
 						<?php 
 							$args = array(
-								'post_type'		=>		'case_studies',
+								'post_type'		=>		'other_works',
 								'posts_per_page'		=>		3
 							);
 
