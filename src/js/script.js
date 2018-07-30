@@ -7,6 +7,11 @@
 
 jQuery(document).ready(function($) {
 
+	// --------------------- 00. Console Message --------------------- //
+
+	console.log("%c¡Me Encontraste!", "font-size: 32px; background-color: #d54935; padding: 3px 10px 5px; color: #efefef", "(You found me!)");
+	console.log("%cIf you enjoyed checking out my amateur coding skills, why not hire me and help me to improve? I'd love to learn from a pro!", "color: #323232; font-size: 14px; background-color: #efefef; padding: 5px 10px 8px;")
+
 
 	// --------------------- 01. Navigation --------------------- //
 	var menu = $('#menu');
