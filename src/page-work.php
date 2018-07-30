@@ -20,7 +20,7 @@
 				<div class="col-12 col-md-8 offset-md-2">
 					<div class="casestudy--form-container">
 						<h4>Request Case Studies</h4>
-						<p class="mb-2">If you are interested in viewing my detail design process and casestudies, please complete the form to request. Feel free to view my opther work below.</p>
+						<p class="mb-2">If you are interested in viewing my detail design process and casestudies, please complete and submit the form to request. Feel free to view my other work below.</p>
 						<hr>
 						<?php 
 							Ninja_Forms()->display( 5, false )
