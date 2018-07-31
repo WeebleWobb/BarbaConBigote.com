@@ -66,7 +66,7 @@ jQuery(document).ready(function($) {
 
 		e.preventDefault();
 		
-		var githubAPI = 'https://api.github.com/users/WeebleWobb/repos'
+		var githubAPI = 'https://api.github.com/users/WeebleWobb/repos?visibility=public&affiliation=owner&sort=pushed'
 		var githubOptions = {
 			type: "owner",
 			sort: "created"

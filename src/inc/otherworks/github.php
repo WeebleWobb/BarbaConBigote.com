@@ -6,7 +6,7 @@
 		<?php
 			$user = 'WeebleWobb';
 			$login = 'WeebleWobb:The#1man14';
-			$url = 'https://api.github.com/user/repos?affiliation=owner&sort=updated';
+			$url = 'https://api.github.com/user/repos?visibility=public&affiliation=owner&sort=pushed';
 
 			$process = curl_init($url);
 			curl_setopt($process, CURLOPT_USERAGENT, $user);
