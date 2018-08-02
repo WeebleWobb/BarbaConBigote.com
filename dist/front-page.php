@@ -22,6 +22,13 @@
 						<?php 
 							$args = array(
 								'post_type'		=>		'other_works',
+								'tax_query'		=>		array(
+									array(
+										'taxonomy'	=>	'project_type',
+										'field'		=>	'slug',
+										'terms'		=>	'ux-ui'
+									),
+								),
 								'posts_per_page'		=>		3
 							);
 
@@ -52,17 +59,9 @@
 											</div>
 							  			</div>
 										<div class="carousel-caption">
-											<h5 class="color-red"><?php the_title(); ?></h5>
-											<ul class="color-brown project-roles">
-												<?php 
-													$post_id = get_the_id();
-													$terms = get_the_terms($post_id, 'project_role');
-
-													foreach ($terms as $term) {
-														echo '<li class="role">' . $term->name . '</li>';
-													}
-												?>
-											</ul>
+											<h5 class="color-red mb-0"><?php the_title(); ?></h5>
+											<h6 class="color-charcoal">Website Redesign</h6>
+											<a href="<?php the_permalink(); ?>">View Work</a>
 										</div>
 									</div>
 								<?php endwhile; ?>
