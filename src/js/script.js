@@ -7,6 +7,11 @@
 
 jQuery(document).ready(function($) {
 
+	// --------------------- 00. Console Message --------------------- //
+
+	console.log("%c¡Me Encontraste!", "font-size: 32px; background-color: #d54935; padding: 3px 10px 5px; color: #efefef", "(You found me!)");
+	console.log("%cIf you enjoyed checking out my amateur coding skills, why not hire me and help me to improve? I'd love to learn from a pro!", "color: #323232; font-size: 14px; background-color: #efefef; padding: 5px 10px 8px;")
+
 
 	// --------------------- 01. Navigation --------------------- //
 	var menu = $('#menu');
@@ -61,7 +66,7 @@ jQuery(document).ready(function($) {
 
 		e.preventDefault();
 		
-		var githubAPI = 'https://api.github.com/users/WeebleWobb/repos'
+		var githubAPI = 'https://api.github.com/users/WeebleWobb/repos?visibility=public&affiliation=owner&sort=pushed'
 		var githubOptions = {
 			type: "owner",
 			sort: "created"
@@ -110,20 +115,20 @@ jQuery(document).ready(function($) {
 
 	// --------------------- 03. About --------------------- //
 
-	// 3.1 Treehouse API Ajax function
-	var url = 'https://teamtreehouse.com/weeblewobb.json';
+	// // 3.1 Treehouse API Ajax function
+	// var url = 'https://teamtreehouse.com/weeblewobb.json';
 
-	show_badges(url);
+	// show_badges(url);
 
-	function show_badges(url) {
+	// function show_badges(url) {
 
-		$.getJSON(url, function(data) {
+	// 	$.getJSON(url, function(data) {
 
-			console.log(data);
+	// 		console.log(data);
 
-		});
+	// 	});
 
-	}
+	// }
 
 
 });

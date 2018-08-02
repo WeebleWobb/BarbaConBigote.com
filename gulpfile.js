@@ -48,9 +48,9 @@ gulp.task('js', function() {
 	return gulp.src(folder.src + 'js/**/*')
 		// .pipe(deporder())
 		.pipe(jshint())
-		.pipe(concat('app.js'))
+		.pipe(concat('script.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest(folder.src + 'js/'));
+		.pipe(gulp.dest(folder.build + 'js/'));
 
 });
 
@@ -71,7 +71,7 @@ gulp.task('watchSass', function() {
 
 // Build to dist task 
 gulp.task('build', ['images', 'js', 'compileSass'], function() { 
-	return gulp.src(['src/assets/*', 'src/*.php', 'src/inc/*', 'src/screenshot.png', 'src/css/style.css'], { base: 'src/'})
+	return gulp.src(['src/assets/*', 'src/*.php', 'src/inc/*/*', 'src/screenshot.png', 'src/css/style.css'], { base: 'src/'})
 		.pipe(gulp.dest(folder.build)
 	);
 });	

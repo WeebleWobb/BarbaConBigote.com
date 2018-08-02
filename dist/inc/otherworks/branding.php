@@ -1,5 +1,5 @@
-<!-- UX-UI Work -->
-<div class="tab-pane fade show active" id="uxui" role="tabpanel" aria-labelledby="uxui-tab">
+<!-- Branding Work -->
+<div class="tab-pane fade" id="branding" role="tabpanel" aria-labelledby="branding-tab">
     <div class="row">
         <?php 
             $args = array(
@@ -8,7 +8,7 @@
                     array(
                         'taxonomy'  =>      'project_type',
                         'field'     =>      'slug',
-                        'terms'     =>      'ux-ui'
+                        'terms'     =>      'branding'
                     )
                 )
             );

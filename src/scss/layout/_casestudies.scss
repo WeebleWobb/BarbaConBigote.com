@@ -48,6 +48,16 @@
         }
     }
 
+    &--form-container {
+        padding: 1.5em 2em .5em;
+        border: solid 1px #e2e2e2;
+        background-color: #f5f5f5;
+
+        & hr {
+            border-color: #e2e2e2;
+        }
+    }
+
     &--img {
 
         img {
