@@ -1,10 +1,24 @@
 .aspot-carousel {
-    position: fixed;
-    top: 30%;
-    right: -10%;
-    width: 100%;
-    max-width: 760px;
-    overflow: hidden;
+    display: none;
+
+    @include media('md') {
+        display: block;
+        width: 100%;
+        max-width: 620px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    @include media('lg') {
+        position: fixed;
+        top: 30%;
+        right: -30%;
+        max-width: 760px;
+    }
+
+    @include media('xl') {
+        right: -10%;
+    }
 
     @include media('xxl') {
         top: 33%;
@@ -17,8 +31,14 @@
 
     &--images {
         position: absolute;
+        max-width: 470px;
         top: 5.125%;
         left: 12%;
+
+        @include media('lg') {
+            max-width: 100%;
+        }
+        
     }
     
     img {

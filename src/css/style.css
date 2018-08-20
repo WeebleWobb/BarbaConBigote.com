@@ -340,12 +340,23 @@ ul {
       font-size: 1em; } }
 
 .aspot-carousel {
-  position: fixed;
-  top: 30%;
-  right: -10%;
-  width: 100%;
-  max-width: 760px;
-  overflow: hidden; }
+  display: none; }
+  @media (min-width: 768px) {
+    .aspot-carousel {
+      display: block;
+      width: 100%;
+      max-width: 620px;
+      overflow: hidden;
+      margin: 0 auto; } }
+  @media (min-width: 992px) {
+    .aspot-carousel {
+      position: fixed;
+      top: 30%;
+      right: -30%;
+      max-width: 760px; } }
+  @media (min-width: 1200px) {
+    .aspot-carousel {
+      right: -10%; } }
   @media (min-width: 1640px) {
     .aspot-carousel {
       top: 33%;
@@ -354,8 +365,12 @@ ul {
     position: relative; }
   .aspot-carousel--images {
     position: absolute;
+    max-width: 470px;
     top: 5.125%;
     left: 12%; }
+    @media (min-width: 992px) {
+      .aspot-carousel--images {
+        max-width: 100%; } }
   .aspot-carousel img {
     width: 100%; }
 
@@ -374,10 +389,6 @@ ul {
 /* ===================================================================
 	04. Home
 =================================================================== */
-.aspot-content {
-  text-shadow: 0 0 5px rgba(79, 44, 31, 0.4);
-  padding: 2em 0; }
-
 #featuredWork {
   margin-bottom: 4em; }
   #featuredWork .carousel-caption {
@@ -426,34 +437,38 @@ ul {
     overflow: hidden;
     max-height: 300px; }
 
-@media (min-width: 768px) {
-  .index-content {
-    height: 87vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .index-content .aspot-content {
-      -ms-flex-item-align: center;
-          align-self: center; } }
-
-@media (min-width: 1640px) {
-  .index-content .container {
-    max-width: 1570px; }
-  .index-content .col-xxl-5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.666667%;
-            flex: 0 0 41.666667%;
-    max-width: 41.666667%; } }
+.index-content {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .index-content .aspot-content {
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-shadow: 0 0 5px rgba(79, 44, 31, 0.4); }
+  @media (min-width: 768px) {
+    .index-content {
+      height: 87vh; }
+      .index-content .aspot-content {
+        padding: 2em 0; } }
+  @media (min-width: 1640px) {
+    .index-content .container {
+      max-width: 1570px; }
+    .index-content .col-xxl-5 {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 41.666667%;
+              flex: 0 0 41.666667%;
+      max-width: 41.666667%; } }
 
 /* ===================================================================
 	05. Work and Post
