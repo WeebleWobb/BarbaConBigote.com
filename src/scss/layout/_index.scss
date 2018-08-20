@@ -2,11 +2,6 @@
 	04. Home
 =================================================================== */
 
-.aspot-content {
-	text-shadow: 0 0 5px rgba(79,44,31, .4);
-	padding: 2em 0;
-}
-
 #featuredWork {
 	margin-bottom: 4em;
 
@@ -73,16 +68,39 @@
 	}
 }
 
-@include media('md') {
-	.index-content {
-		height: 87vh;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
 
+.index-content {
+
+	height: 80vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	.aspot-content {
+		align-self: center;
+		text-shadow: 0 0 5px rgba(79,44,31, .4);
+	}
+
+	@include media('md') {
+		height: 87vh;
+		
 		.aspot-content {
-			align-self: center;
+			padding: 2em 0;
 		}
 	}
+
+	@include media('xxl') {
+
+		.container {
+			max-width: 1570px;
+		}
+
+		.col-xxl-5 {
+			flex: 0 0 41.666667%;
+			max-width: 41.666667%;
+		}
+	} 
+
+
 }
