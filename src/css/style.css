@@ -107,6 +107,9 @@ header.is_about_detail.is_scrolled {
   .nav-container .container {
     display: block;
     margin: 0 auto; }
+    @media (min-width: 1640px) {
+      .nav-container .container {
+        max-width: 1600px; } }
 
 .main-nav {
   background-color: #d54935;
@@ -343,6 +346,10 @@ ul {
   width: 100%;
   max-width: 760px;
   overflow: hidden; }
+  @media (min-width: 1640px) {
+    .aspot-carousel {
+      top: 33%;
+      right: 11.294%; } }
   .aspot-carousel--container {
     position: relative; }
   .aspot-carousel--images {
@@ -438,6 +445,15 @@ ul {
     .index-content .aspot-content {
       -ms-flex-item-align: center;
           align-self: center; } }
+
+@media (min-width: 1640px) {
+  .index-content .container {
+    max-width: 1570px; }
+  .index-content .col-xxl-5 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.666667%;
+            flex: 0 0 41.666667%;
+    max-width: 41.666667%; } }
 
 /* ===================================================================
 	05. Work and Post

@@ -86,3 +86,19 @@
 		}
 	}
 }
+
+@include media('xxl') {
+	.index-content {
+		
+		.container {
+			max-width: 1570px;
+		}
+
+		.col-xxl-5 {
+			flex: 0 0 41.666667%;
+			max-width: 41.666667%;
+		}
+	} 
+
+
+}

@@ -32,6 +32,10 @@ header.is_about_detail.is_scrolled {
 	.container {
 		display: block;
 		margin: 0 auto;
+
+		@include media('xxl') {
+			max-width: 1600px;
+		}
 	}
 }
 

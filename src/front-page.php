@@ -4,7 +4,7 @@
 	<section class="index-content">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-md-6 col-xxl-5">
 					<div class="aspot-content">
 						<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
