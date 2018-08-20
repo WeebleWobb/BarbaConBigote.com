@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
 	});
 
 	// --------------------- 02. Work and Blog --------------------- //
-	var postIMG = $('.work-img, .post-img');
+	var postIMG = $('.work-img, .post-img, .aspot-carousel--img');
 	var moreRepos = $('#more-repos');
 
 	// 2.1 Work and Blog Thumbnail hover
@@ -113,22 +113,8 @@ jQuery(document).ready(function($) {
 		
 	}
 
-	// --------------------- 03. About --------------------- //
-
-	// // 3.1 Treehouse API Ajax function
-	// var url = 'https://teamtreehouse.com/weeblewobb.json';
-
-	// show_badges(url);
-
-	// function show_badges(url) {
-
-	// 	$.getJSON(url, function(data) {
-
-	// 		console.log(data);
-
-	// 	});
-
-	// }
+	// --------------------- 03. Aspot Carousel --------------------- //
+	
 
 
 });

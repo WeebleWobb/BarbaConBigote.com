@@ -1,8 +1,9 @@
 .aspot-carousel {
-    position: absolute;
-    top: 35%;
+    position: fixed;
+    top: 30%;
     right: -10%;
-    width: 60%;
+    width: 100%;
+    max-width: 760px;
     overflow: hidden;
 
     &--container {
@@ -11,11 +12,27 @@
 
     &--images {
         position: absolute;
-        top: 5%;
+        top: 5.125%;
         left: 12%;
     }
     
     img {
         width: 100%;
+    }
+}
+
+// Bootstrap override on A-spot carousel
+.aspot-carousel {
+    .carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-item-next, .active.carousel-item-right {
+        -webkit-transform: translate3d(0, +100%, 0);
+        transform: translate3d(0, +100%, 0);
+    }
+    .carousel-item-prev, .active.carousel-item-left {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
