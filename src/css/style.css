@@ -336,6 +336,21 @@ ul {
     ul {
       font-size: 1em; } }
 
+.aspot-carousel {
+  position: absolute;
+  top: 35%;
+  right: -10%;
+  width: 60%;
+  overflow: hidden; }
+  .aspot-carousel--container {
+    position: relative; }
+  .aspot-carousel--images {
+    position: absolute;
+    top: 5%;
+    left: 12%; }
+  .aspot-carousel img {
+    width: 100%; }
+
 /* ===================================================================
 	04. Home
 =================================================================== */
