@@ -5,7 +5,7 @@
 			<div class="container">
 				<div class="row mb-4">
                     <div class="col-12 col-md-2">
-                        <a href="<?php ?>">Back to Work</a>
+                        <a href="<?php echo get_site_url(null, '/work/'); ?>">Back to Work</a>
                     </div>
 					<div class="col-12 col-md-8">
                         <h3><?php the_title(); ?></h3>

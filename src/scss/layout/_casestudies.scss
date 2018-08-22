@@ -76,6 +76,78 @@
     }
 }
 
+.color {
+    @include colors($lcti);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+
+    @include media('md') {
+        position: absolute;
+        right: 0;
+        width: 40%;
+    }
+
+    &--cell {
+        padding: 1.5em 0;
+        display: flex;
+        flex: 1 1 50%;
+        align-self: stretch;
+        align-content: center;
+        color: #fff;
+
+        @include media('md') {
+            padding: 0;
+        }
+        
+        p {
+            margin: 0 auto;
+            align-self: center;
+            text-align: center;
+        }
+    }
+}
+
+.color-balance {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.color-wheel {
+    position: absolute;
+    align-self: center;
+}
+
+.flex__full {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.map {
+
+    @include media('md') {
+        position: absolute;
+        right: 0;
+        width: 48%;
+    }
+}
+
+.typography {
+    display: flex;
+    flex-direction: column;
+
+    &--items {
+        padding: 2.5em 0;
+        align-self: stretch;
+        align-content: center;
+    }
+}
+
 .otherwork {
 
     &-aspot {
@@ -109,54 +181,4 @@
 
 }
 
-.flex__full {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-wrap: wrap;
-    position: relative;
-}
 
-.typography {
-    display: flex;
-    flex-direction: column;
-
-    &--items {
-        padding: 2.5em 0;
-        align-self: stretch;
-        align-content: center;
-    }
-}
-
-.color {
-    @include colors($lcti);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-
-    @include media('md') {
-        position: absolute;
-        right: 0;
-        width: 40%;
-    }
-
-    &--cell {
-        padding: 1.5em 0;
-        display: flex;
-        flex: 1 1 50%;
-        align-self: stretch;
-        align-content: center;
-        color: #fff;
-
-        @include media('md') {
-            padding: 0;
-        }
-        
-        p {
-            margin: 0 auto;
-            align-self: center;
-            text-align: center;
-        }
-    }
-}
