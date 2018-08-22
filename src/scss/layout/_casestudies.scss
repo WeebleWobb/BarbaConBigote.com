@@ -48,20 +48,12 @@
         }
     }
 
-    &--form-container {
-        padding: 1.5em 2em .5em;
-        border: solid 1px #e2e2e2;
-        background-color: #f5f5f5;
-
-        & hr {
-            border-color: #e2e2e2;
-        }
-    }
-
     &--img {
 
         img {
             box-shadow: $work-shadow;
+            width: 100%;
+            border-radius: 5px;
         }
 
         figcaption p {
@@ -115,4 +107,35 @@
         margin-bottom: 1em;
     }
 
+}
+
+.typography {
+    display: flex;
+    flex-direction: column;
+
+    &--items {
+        padding: 2.5em 0;
+    }
+}
+
+.color {
+    @include colors($lcti);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+
+    &--cell {
+        display: flex;
+        flex: 1 1 50%;
+        align-self: stretch;
+        align-content: center;
+        color: #fff;
+
+        p {
+            margin: 0 auto;
+            align-self: center;
+            text-align: center;
+        }
+    }
 }
