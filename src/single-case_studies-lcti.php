@@ -74,31 +74,30 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <figure class="casestudy--img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/work/lcti/health-icons.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/work/lcti/engineering-icons.jpg" alt="">
                     </figure>
                 </div>
             </div>
         </section>
-		<section class="container py-5 mb-5">
-            <div class="row">
-                <div class="col-12 mb-3">
-                    <h5>Typography and Color</h5>
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="typography">
-                        <div class="typography--items">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/work/lcti/proxima-regular.svg" alt="">
-                        </div>
-                        <div class="typography--items">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/work/lcti/proxima-bold.svg" alt="">
-                        </div>
-                        <div class="typography--items">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/work/lcti/proxima-black.svg" alt="">
+		<section class="flex__full my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Typography and Color</h5>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <div class="typography">
+                            <div class="typography--items">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/work/lcti/proxima-regular.svg" alt="">
+                            </div>
+                            <div class="typography--items">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/work/lcti/proxima-bold.svg" alt="">
+                            </div>
+                            <div class="typography--items">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/work/lcti/proxima-black.svg" alt="">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Finish color pallete. Use flex box solution -->
-                <div class="col-12 col-md-5 offset-md-2">
                     <div class="color">
                         <div class="color--cell color__arts">
                             <p>Arts &amp; <br>Humanities <br>#29A0F4</p>
@@ -133,6 +132,8 @@
                     </div>
                 </div>
             </div>
+            <!-- Finish color pallete. Use flex box solution -->
+            
         </section>
 		<!-- End Main Content -->
 	</main>
