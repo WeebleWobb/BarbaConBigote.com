@@ -123,6 +123,8 @@
 
     &--items {
         padding: 2.5em 0;
+        align-self: stretch;
+        align-content: center;
     }
 }
 
@@ -132,17 +134,25 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: 100%;
-    position: absolute;
-    right: 0;
-    width: 40%;
+
+    @include media('md') {
+        position: absolute;
+        right: 0;
+        width: 40%;
+    }
 
     &--cell {
+        padding: 1.5em 0;
         display: flex;
         flex: 1 1 50%;
         align-self: stretch;
         align-content: center;
         color: #fff;
 
+        @include media('md') {
+            padding: 0;
+        }
+        
         p {
             margin: 0 auto;
             align-self: center;

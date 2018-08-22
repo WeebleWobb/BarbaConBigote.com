@@ -458,7 +458,7 @@ ul {
     text-shadow: 0 0 5px rgba(79, 44, 31, 0.4); }
   @media (min-width: 768px) {
     .index-content {
-      height: 87vh; }
+      height: 86vh; }
       .index-content .aspot-content {
         padding: 2em 0; } }
   @media (min-width: 1640px) {
@@ -1039,7 +1039,11 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column; }
   .typography--items {
-    padding: 2.5em 0; }
+    padding: 2.5em 0;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    -ms-flex-line-pack: center;
+        align-content: center; }
 
 .color {
   display: -webkit-box;
@@ -1051,10 +1055,7 @@ ul {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  width: 40%; }
+  height: 100%; }
   .color__arts {
     background-color: #29A0F4; }
   .color__manufacturing {
@@ -1075,7 +1076,13 @@ ul {
     background-color: #79C223; }
   .color__mechanics {
     background-color: #7C9456; }
+  @media (min-width: 768px) {
+    .color {
+      position: absolute;
+      right: 0;
+      width: 40%; } }
   .color--cell {
+    padding: 1.5em 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1087,6 +1094,9 @@ ul {
     -ms-flex-line-pack: center;
         align-content: center;
     color: #fff; }
+    @media (min-width: 768px) {
+      .color--cell {
+        padding: 0; } }
     .color--cell p {
       margin: 0 auto;
       -ms-flex-item-align: center;
