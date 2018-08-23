@@ -2,6 +2,13 @@
 Portfolio website redesign: Utilizing Gulp, Sass, and NPM, and WordPress CMS
 
 # Release Notes
+
+### v1.3 - 08.23.18
+**Case Studies**
+* Revised case studies section. Now includes new case studies from UX/UI other works. 
+* Removed UX/UI from other works.
+* A-spot rework. Includes new case studies.
+
 ### v1.2 - 08.10.18
 **Front Page**
 * A-spot Redesign. Redesigned layout for work carousel.

@@ -60,8 +60,19 @@ hr {
 	z-index: 999;
 }
 
+.mb-md-12 {
+
+	@include media('md') {
+		margin-bottom: 12em;
+	}
+}
+
 .no-padding {
 	padding: 0;
+}
+
+.position__relative {
+	position: relative;
 }
 
 .rwd-line {

@@ -58,8 +58,15 @@ hr {
   max-width: 120px;
   z-index: 999; }
 
+@media (min-width: 768px) {
+  .mb-md-12 {
+    margin-bottom: 12em; } }
+
 .no-padding {
   padding: 0; }
+
+.position__relative {
+  position: relative; }
 
 .rwd-line {
   display: block; }
@@ -458,7 +465,7 @@ ul {
     text-shadow: 0 0 5px rgba(79, 44, 31, 0.4); }
   @media (min-width: 768px) {
     .index-content {
-      height: 87vh; }
+      height: 86vh; }
       .index-content .aspot-content {
         padding: 2em 0; } }
   @media (min-width: 1640px) {
@@ -979,16 +986,11 @@ ul {
     margin-top: 2.5em;
     margin-bottom: 2.5em; }
 
-.casestudy--form-container {
-  padding: 1.5em 2em .5em;
-  border: solid 1px #e2e2e2;
-  background-color: #f5f5f5; }
-  .casestudy--form-container hr {
-    border-color: #e2e2e2; }
-
 .casestudy--img img {
   -webkit-box-shadow: 0 0 20px #dbdbdb;
-          box-shadow: 0 0 20px #dbdbdb; }
+          box-shadow: 0 0 20px #dbdbdb;
+  width: 100%;
+  border-radius: 5px; }
 
 .casestudy--img figcaption p {
   text-align: center;
@@ -1002,6 +1004,112 @@ ul {
   margin-bottom: 4em; }
   .casestudy-pagination--next {
     float: right; }
+
+.color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%; }
+  .color__arts {
+    background-color: #29A0F4; }
+  .color__manufacturing {
+    background-color: #2C406F; }
+  .color__industrial {
+    background-color: #BA5FE2; }
+  .color__construction {
+    background-color: #662F74; }
+  .color__engineering {
+    background-color: #F64F25; }
+  .color__transportation {
+    background-color: #C34949; }
+  .color__equipment {
+    background-color: #FFA53A; }
+  .color__business {
+    background-color: #29A0F4; }
+  .color__health {
+    background-color: #79C223; }
+  .color__mechanics {
+    background-color: #7C9456; }
+  @media (min-width: 768px) {
+    .color {
+      position: absolute;
+      right: 0;
+      width: 40%; } }
+  .color--cell {
+    padding: 1.5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    color: #fff; }
+    @media (min-width: 768px) {
+      .color--cell {
+        padding: 0; } }
+    .color--cell p {
+      margin: 0 auto;
+      -ms-flex-item-align: center;
+          align-self: center;
+      text-align: center; }
+
+.color-balance {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.color-wheel {
+  position: absolute;
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.flex__full {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative; }
+
+@media (min-width: 768px) {
+  .map {
+    position: absolute;
+    right: 0; } }
+
+.map--image {
+  margin-left: auto;
+  overflow: hidden; }
+
+.typography {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .typography--items {
+    padding: 2.5em 0;
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    -ms-flex-line-pack: center;
+        align-content: center; }
 
 .otherwork-aspot {
   padding-top: 3em;
