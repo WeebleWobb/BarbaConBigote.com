@@ -23,14 +23,7 @@
 							<div id="featuredWork" class="aspot-carousel--images carousel slide" data-ride="carousel" data-interval="6000">
 								<?php 
 									$args = array(
-										'post_type'		=>		'other_works',
-										'tax_query'		=>		array(
-											array(
-												'taxonomy'	=>	'project_type',
-												'field'		=>	'slug',
-												'terms'		=>	'ux-ui'
-											),
-										),
+										'post_type'		=>		'case_studies',
 										'posts_per_page'		=>		3
 									);
 	
@@ -55,7 +48,7 @@
 											?>
 											<div class="carousel-item <?php echo $class; ?>">
 												<div class="aspot-carousel--img">
-													<img class="d-block w-100" src="<?php the_post_thumbnail_url(); ?>" alt="">
+													<img class="d-block w-100" src="<?php the_field('home_image'); ?>" alt="">
 													<div class="work-hover">
 														<a class="btn btn-primary" href="<?php echo get_post_permalink(); ?>">View Work</a>
 													</div>
