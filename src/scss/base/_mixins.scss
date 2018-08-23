@@ -68,3 +68,12 @@
 		}
 	}
 }
+
+// Color Repeater
+@mixin colors($map) {
+	@each $colors, $color in $map {
+		&__#{$colors} {
+			background-color: $color;
+		}
+	}
+} 

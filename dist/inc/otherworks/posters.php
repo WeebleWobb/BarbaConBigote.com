@@ -1,5 +1,5 @@
 <!-- Poster Work -->
-<div class="tab-pane fade" id="posters" role="tabpanel" aria-labelledby="posters-tab">
+<div class="tab-pane fade show active" id="posters" role="tabpanel" aria-labelledby="posters-tab">
     <div class="row">
         <?php 
             $args = array(
