@@ -17,17 +17,35 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-md-8 offset-md-2">
-					<div class="casestudy--form-container">
-						<h4>Request Case Studies</h4>
-						<p class="mb-2">If you are interested in viewing my detail design process and casestudies, please complete and submit the form to request. Feel free to view my other work below.</p>
-						<hr>
-						<?php 
-							Ninja_Forms()->display( 5, false )
-						?>
+				<?php 
+					$args = array(
+						'post_type'	=>	'case_studies',
+						'posts_per_page'	=> -1,
+						'orderby'	=>	'RAND'
+					);
+
+					$the_query = new WP_query($args);
+				?>
+
+				<?php if($the_query->have_posts()) : while($the_query->have_posts()) : $the_query->the_post(); ?>
+					<div class="col-12 col-md-6">
+					<figure class="work">
+						<div class="work-img">
+							<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid']); ?>
+							<div class="work-hover">
+								<a class="btn btn-primary" href="<?php the_permalink(); ?>">View Work</a>
+							</div>
+						</div>
+						<figcaption class="work-caption">
+							<a href="<?php the_permalink(); ?>"><h6><?php the_title(); ?></h6></a>
+						</figcaption>
+					</figure>
 					</div>
-				</div>
-				
+				<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+				<?php else : ?>
+					<h3 class="align-center">Sorry, my case studies are gone.</h3>
+				<?php endif; ?>
 			</div>
 
 		</div>
@@ -40,10 +58,7 @@
 
 		<ul class="nav nav-tabs" id="other-works" role="tablist">
 			<li class="nav-item">
-				<a href="#uxui" class="nav-link active" id="uxui-tab" data-toggle="tab" role="tab" aria-contols="uxui" aria-selected="true">UX/UI</a>
-			</li>
-			<li class="nav-item">
-				<a href="#posters" class="nav-link" id="posters-tab" data-toggle="tab" role="tab" aria-contols="posters" aria-selected="false">Posters</a>
+				<a href="#posters" class="nav-link active" id="posters-tab" data-toggle="tab" role="tab" aria-contols="posters" aria-selected="true">Posters</a>
 			</li>
 			<li class="nav-item">
 				<a href="#infographics" class="nav-link" id="infographics-tab" data-toggle="tab" role="tab" aria-controls="infographics" aria-selected="false">Infographics</a>
@@ -57,13 +72,10 @@
 		</ul>
 		
 		<div class="tab-content" id="other-worksContent">
-			
-				<?php include('inc/otherworks/ux-ui.php'); ?>
-				<?php include('inc/otherworks/posters.php'); ?>
-				<?php include('inc/otherworks/infographics.php'); ?>
-				<?php include('inc/otherworks/branding.php'); ?>
-				<?php include('inc/otherworks/github.php'); ?>
-
+			<?php include('inc/otherworks/posters.php'); ?>
+			<?php include('inc/otherworks/infographics.php'); ?>
+			<?php include('inc/otherworks/branding.php'); ?>
+			<?php include('inc/otherworks/github.php'); ?>
 		</div>
 		
 	</section>
