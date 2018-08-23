@@ -58,6 +58,10 @@ hr {
   max-width: 120px;
   z-index: 999; }
 
+@media (min-width: 768px) {
+  .mb-md-12 {
+    margin-bottom: 12em; } }
+
 .no-padding {
   padding: 0; }
 
@@ -1086,8 +1090,11 @@ ul {
 @media (min-width: 768px) {
   .map {
     position: absolute;
-    right: 0;
-    width: 48%; } }
+    right: 0; } }
+
+.map--image {
+  margin-left: auto;
+  overflow: hidden; }
 
 .typography {
   display: -webkit-box;

@@ -30,12 +30,12 @@
 			</div>
 		</section>
 
-        <section class="position__relative mb-5">
+        <section class="position__relative mb-md-12">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <figure>
-                            <img class="img-fluidd" src="<?php echo get_template_directory_uri(); ?>/assets/work/titanium/titanium-macbook.png" alt="">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/titanium/titanium-macbook.png" alt="">
                         </figure>
                     </div>
                     <div class="w-100"></div>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="map">
                         <figure class="map--img">
-                            <img class="img-fluidd" src="<?php echo get_template_directory_uri(); ?>/assets/work/titanium/map-overlay.jpg" alt="">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/titanium/map-overlay.jpg" alt="">
                         </figure>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </section>
-		<section class="container my-5">
+		<section class="container my-5 py-3">
             <div class="row">
                 <div class="col-12 mb-3">
                     <h5>Typography</h5>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-9">
-                    <img class="img-fluidd" src="<?php echo get_template_directory_uri(); ?>/assets/work/titanium/typography-screen.png">
+                    <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/work/titanium/typography-screen.png">
                 </div>
             </div>
             <!-- Finish color pallete. Use flex box solution -->
