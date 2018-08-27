@@ -20,7 +20,7 @@
 				<div class="aspot-carousel">
 					<div class="aspot-carousel--container">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/home/macbook.png" alt="" class="aspot-carousel--macbook">
-							<div id="featuredWork" class="aspot-carousel--images carousel slide" data-ride="carousel" data-interval="6000">
+							<div id="featuredWork" class="aspot-carousel--images carousel slide" data-ride="carousel" data-interval="4500">
 								<?php 
 									$args = array(
 										'post_type'		=>		'case_studies',
