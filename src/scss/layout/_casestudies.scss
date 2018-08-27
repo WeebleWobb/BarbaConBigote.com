@@ -1,3 +1,17 @@
+.bar-graph {
+    width: 100%;
+    max-width: 415px;
+    margin: 0 auto;
+
+    figcaption {
+        font-weight: 900;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
 .casestudy {
 
     &-aspot {
@@ -120,6 +134,11 @@
     align-self: center;
 }
 
+.discovery-subhead {
+    border-left: 3px solid $orange;
+    padding: 3px 0 2px 8px;
+}
+
 .flex__full {
     display: flex;
     width: 100%;
@@ -183,6 +202,48 @@
         margin-bottom: 1em;
     }
 
+}
+
+.push-type {
+    margin: 2em 0;
+    width: 100%;
+    overflow: hidden;
+
+    &>img {
+        float: left;
+    }
+    
+    img:nth-child(1) {
+        max-width: 158px;
+    }
+
+    img:nth-child(2) {
+        max-width: 174px;
+        margin-left: 30px;
+    }
+}
+
+.swatch {
+    box-shadow: $work-shadow;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    
+    &--color {
+        @include colors($pushstart);
+        width: 100%;
+        height: 130px;
+    }
+    
+    p {
+        background-color: #fff;
+        text-align: center;
+        padding: 1em;
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    
 }
 
 

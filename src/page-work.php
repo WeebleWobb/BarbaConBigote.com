@@ -28,12 +28,12 @@
 				?>
 
 				<?php if($the_query->have_posts()) : while($the_query->have_posts()) : $the_query->the_post(); ?>
-					<div class="col-12 col-md-6">
+					<div class="col-12 col-md-6 mb-3">
 					<figure class="work">
 						<div class="work-img">
 							<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid']); ?>
 							<div class="work-hover">
-								<a class="btn btn-primary" href="<?php the_permalink(); ?>">View Work</a>
+								<a class="btn btn-primary" href="<?php the_permalink(); ?>">View Case Study</a>
 							</div>
 						</div>
 						<figcaption class="work-caption">
