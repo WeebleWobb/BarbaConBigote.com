@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Juan D. Bolaños: Interactive Designer, Avid Developer, User Experience Advocate</title>
+	<title>Juan D. Bolaños: UX/UI Designer, Avid Developer, Analytics Enthusiast, User Experience Advocate</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
+	<meta name="description" content="I’m Juan and I’m passionate about User Centric design and experiences. As an UX/UI Designer I strive in providing the best possible experience for users that both help and enhance their daily lives and make the internet a better place.">
 	<link rel="icon" href="<?php echo get_template_directory_uri() ?>/assets/favicon-16x16.png" sizes="16x16">
 	<link rel="icon" href="<?php echo get_template_directory_uri() ?>/assets/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" href="<?php echo get_template_directory_uri() ?>/assets/favicon-96x96.png" sizes="96x96">

@@ -464,10 +464,8 @@ ul {
         align-self: center;
     text-shadow: 0 0 5px rgba(79, 44, 31, 0.4); }
   @media (min-width: 768px) {
-    .index-content {
-      height: 86vh; }
-      .index-content .aspot-content {
-        padding: 2em 0; } }
+    .index-content .aspot-content {
+      padding: 2em 0; } }
   @media (min-width: 1640px) {
     .index-content .container {
       max-width: 1570px; }
