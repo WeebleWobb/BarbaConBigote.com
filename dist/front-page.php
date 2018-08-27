@@ -20,7 +20,7 @@
 				<div class="aspot-carousel">
 					<div class="aspot-carousel--container">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/home/macbook.png" alt="" class="aspot-carousel--macbook">
-							<div id="featuredWork" class="aspot-carousel--images carousel slide" data-ride="carousel" data-interval="6000">
+							<div id="featuredWork" class="aspot-carousel--images carousel slide" data-ride="carousel" data-interval="4500">
 								<?php 
 									$args = array(
 										'post_type'		=>		'case_studies',
@@ -50,7 +50,7 @@
 												<div class="aspot-carousel--img">
 													<img class="d-block w-100" src="<?php the_field('home_image'); ?>" alt="">
 													<div class="work-hover">
-														<a class="btn btn-primary" href="<?php echo get_post_permalink(); ?>">View Work</a>
+														<a class="btn btn-primary" href="<?php echo get_post_permalink(); ?>">View Case Study</a>
 													</div>
 												</div>
 											</div>
