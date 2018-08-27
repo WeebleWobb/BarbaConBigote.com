@@ -50,7 +50,7 @@
 												<div class="aspot-carousel--img">
 													<img class="d-block w-100" src="<?php the_field('home_image'); ?>" alt="">
 													<div class="work-hover">
-														<a class="btn btn-primary" href="<?php echo get_post_permalink(); ?>">View Work</a>
+														<a class="btn btn-primary" href="<?php echo get_post_permalink(); ?>">View Case Study</a>
 													</div>
 												</div>
 											</div>
