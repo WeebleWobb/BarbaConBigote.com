@@ -87,3 +87,87 @@ function custom_color_options($init) {
 }
 
 add_filter('tiny_mce_before_init', 'custom_color_options');
+
+/* ===========================================================
+WP Login Functions
+============================================================== */
+
+// Changes Logo Url
+function barba_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'barba_login_logo_url' );
+
+function barba_login_logo_url_title() {
+    return 'Juan D. Bolaños: UX/UI Designer | Avid Developer | Analytics enthusiast | User Experience Advocate';
+}
+add_filter( 'login_headertitle', 'barba_login_logo_url_title' );
+
+// Changes the WP Login Logo
+function barba_login_logo() { ?>
+    <style type="text/css">
+        body.login {
+            background-color: #d54935;
+            color: #323232;
+            padding: 0 30px;
+        }
+        body.login div#login {
+            min-width: 320px;
+            max-width: 400px;
+            width: 100%
+        }
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/barba-logo.png);
+			height: 70px;
+			width: 320px;
+			background-size: 176px 89px;
+			background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        }
+        body.login div#login form#loginform {
+        	-webkit-box-shadow: 0 0 40px rgba(79, 44, 31, .5);
+            box-shadow: 0 0 40px rgba(79, 44, 31, .5);
+            border-radius: 5px;
+            padding: 30px 35px;
+        }
+        body.login div#login form#loginform label {
+            color: #323232;
+        }
+        body.login div#login form#loginform input {
+            border-color: #d2d2d2;
+        }
+        body.login div#login form#loginform input:focus {
+        	border-color: #efefef;
+        	-webkit-box-shadow: 0 0 2px rgba(50, 50, 50, .8);
+        	box-shadow: 0 0 2px rgba(50, 50, 50, .8);
+        }
+        body.login div#login form#loginform p.submit, body.login div#login form#loginform p.forgetmenot {
+            margin-top: 1em;
+        }
+        body.login div#login form#loginform p.submit input#wp-submit {
+        	text-decoration: none;
+		    padding: 5px 20px;
+		    display: inline-block;
+		    font-size: .875em;
+		    border: none;
+		    border-radius: 3px;
+		    background-color: #d54935;
+		    height: auto;
+		    border-color: transparent;
+		    box-shadow: none;
+		    text-shadow: none;
+        }
+        body.login div#login form#loginform p.submit input#wp-submit:hover {
+        	cursor: pointer;
+   			background-color: #f5a800;
+        }
+        body.login div#login p#backtoblog a, body.login div#login p#nav a {
+            color: #efefef;
+        }
+        body.login div#login p#backtoblog a:hover , body.login div#login p#nav a:hover {
+            color: #f5a800;
+        }
+    </style>
+<?php }
+
+add_action( 'login_enqueue_scripts', 'barba_login_logo' );
