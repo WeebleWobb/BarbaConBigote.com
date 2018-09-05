@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-12 col-md-6 mb-2">
                         <h6>Planning for Scale</h6>
-                        <p>The UX process is centered around two main principles, Empathy and Design Thinking. The main objective isn't to just create a platform but to build a story that is centered around each intended user, identify the gaps, and provide them with an experience that is both desirable and viable.</p>
+                        <p>Throughout the lifespan of IBS-D, it was expected that the platform would grow and extend to the consumer audience. Planning for scale and how these two experience would come together to provide the proper solutions for both target audiences, while feeling as one cohesive experience, was crucial.</p>
                     </div>
                     <div class="col-12 col-md-6 mb-3">
                         <figure class="casestudy--img">
