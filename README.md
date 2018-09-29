@@ -4,7 +4,7 @@ Portfolio website redesign: Utilizing Gulp, Sass, and NPM, and WordPress CMS
 # Release Notes
 
 ### v1.4.1 - 09.28.18
-**Global**
+**Navigation**
 * Navigation restructure. Includes: Casestudies and Social links
 * Restructured header for better responsiveness accross device widths
 * Changed hamburger to combo nav to better UX
