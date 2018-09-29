@@ -60,34 +60,65 @@
 	?> 
 >
 <header role="banner" class="nav-container<?php if(is_singular('about_entries')) { echo ' is_about_detail '; } ?>">
-	<div id="navBar" class="container py-3">
-		<div class="row align-items-center">
-			<div class="col-6">
-				<a href="<?php echo site_url();?>"><img id="logo" class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/barba-logo.png" alt="Barba con Bigote"></a>
-			</div>
-			<div class="col-6">
-				<div id="menu" class="menu">
-					<div class="line"></div>
-					<div class="line"></div>
-					<div class="line"></div>
-				</div>
+	<div class="navBar">
+		<a href="<?php echo site_url();?>"><img id="logo" class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/barba-logo.png" alt="Barba con Bigote"></a>
+		<div id="menu" class="menu">
+			<span class="menu--text">Men&uacute;</span>
+			<div class="line-container">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
 			</div>
 		</div>
 	</div>
 	<nav role="navigation" id="mainNav" class="main-nav">
-		<?php 
-			$args = array(
-				'menu'			=>	'Main Nav',
-				'menu_class'	=>	'nav flex-column',
-				'container'		=>	'ul',
-				'walker'		=>	new barba_walker()
-			);
+		<div id="mainNav-js" class="main-nav--menu">
+			<?php 
+				$args = array(
+					'menu'			=>	'Main Nav',
+					'menu_class'	=>	'nav flex-column',
+					'container'		=>	'ul',
+					'walker'		=>	new barba_walker()
+				);
+	
+				wp_nav_menu($args);
+			?>
+			<div class="contact">
+				<h5 class="color-grey">Get in Touch</h5>
+				<a href="mailto:hola@barbaconbigote.com">hola@barbaconbigote.com</a>
+			</div>
+		</div>
+		<div class="main-nav--casestudies">
+			<h6>Explore Case Studies</h6>
+			<hr>
+			<?php 
+				$args = array(
+					'post_type'	=>	'case_studies',
+					'posts_per_page'	=> -1,
+					'order'	=>	'DESC'
+				);
 
-			wp_nav_menu($args);
-		?>
-		<div class="contact">
-			<h5 class="color-grey">Get in Touch</h5>
-			<a href="mailto:hola@barbaconbigote.com">hola@barbaconbigote.com</a>
+				$the_query = new WP_query($args);
+			?>
+
+			<?php if($the_query->have_posts()) : while($the_query->have_posts()) : $the_query->the_post(); ?>
+				<article>
+					<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
+					<p><?php the_field('excerpt'); ?></p>
+				</article>
+			<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+			<?php else : ?>
+				<h3 class="align-center">Sorry, my case studies are gone.</h3>
+			<?php endif; ?>
+		</div>
+		<div class="main-nav--social">
+			<ul class="nav">
+				<li class="nav-item"><a href="https://www.linkedin.com/in/bolanosjd/" target="_blank" class="nav-link">LinkedIn</a></li>
+				<li class="nav-item"><a href="https://github.com/WeebleWobb" target="_blank" class="nav-link">GitHub</a></li>
+				<li class="nav-item"><a href="https://twitter.com/BolanosJD" target="_blank" class="nav-link">Twitter</a></li>
+				<li class="nav-item"><a href="https://www.instagram.com/weeblewobb/" target="_blank" class="nav-link">Instagram</a></li>
+			</ul>
 		</div>
 	</nav>
 </header>
