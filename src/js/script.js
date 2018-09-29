@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 
 		var nav = $('#mainNav');
 		var body = $('body');
-		var navItems = $('#mainNav .nav-item, #mainNav .contact');
+		var navItems = $('#mainNav-js .nav-item, #mainNav-js .contact, .main-nav--casestudies, .main-nav--social');
 
 		// Adds transitions to navigation when clicked
 		nav.toggleClass('is-open');
