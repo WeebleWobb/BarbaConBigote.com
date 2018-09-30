@@ -13,7 +13,7 @@
 
 						<div class="contact mt-4">
 							<h6 class="color-grey">Juan D. Bola&ntilde;os</h6>
-							<a href="#">hola@barbaconbigote.com</a>
+							<a href="mailto:bolanosjd@gmail.com">hola@barbaconbigote.com</a>
 						</div>
 
 					<?php endwhile; else : ?>

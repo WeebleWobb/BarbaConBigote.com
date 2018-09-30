@@ -85,7 +85,7 @@
 			?>
 			<div class="contact">
 				<h5 class="color-grey">Get in Touch</h5>
-				<a href="mailto:hola@barbaconbigote.com">hola@barbaconbigote.com</a>
+				<a href="mailto:bolanosjd@gmail.com">hola@barbaconbigote.com</a>
 			</div>
 		</div>
 		<div class="main-nav--casestudies">
