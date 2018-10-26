@@ -563,8 +563,7 @@ ul {
           justify-content: center; }
   .index-content .aspot-content {
     -ms-flex-item-align: center;
-        align-self: center;
-    text-shadow: 0 0 5px rgba(79, 44, 31, 0.4); }
+        align-self: center; }
   @media (min-width: 768px) {
     .index-content .aspot-content {
       padding: 2em 0; } }
