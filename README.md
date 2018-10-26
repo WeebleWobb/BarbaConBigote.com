@@ -2,6 +2,9 @@
 Portfolio website redesign: Utilizing Gulp, Sass, and NPM, and WordPress CMS
 
 # Release Notes
+### v1.4.2 - 10.26.18
+**Aspot**
+* Accessibility: Text shadow removal, increase readability and legability
 
 ### v1.4.1 - 09.28.18
 **Navigation**
@@ -20,7 +23,6 @@ Portfolio website redesign: Utilizing Gulp, Sass, and NPM, and WordPress CMS
 **Work**
 * Push Start case study template dev
 * Case study template revisions
-
 
 ### v1.3 - 08.23.18
 **Case Studies**
