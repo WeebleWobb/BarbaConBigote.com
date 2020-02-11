@@ -1,3 +1,4 @@
+
 /* ===================================================================
 	02. Navigation
 =================================================================== */
@@ -22,7 +23,6 @@ header.is_about_detail.is_scrolled {
 
 	}
 }
-
 
 .nav-container {
 	@include position-relative {
@@ -121,7 +121,7 @@ header.is_about_detail.is_scrolled {
 			@include element-animation-out;
 	
 			&.is-open {
-				@include element-animation-in
+				@include element-animation-in;
 				
 				&:nth-child(1n) {
 					transition-delay: .125s;
