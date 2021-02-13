@@ -1,12 +1,23 @@
-import Link from 'next/link'
+import Head from 'next/head'
+import Layout from '../components/layout'
+import Nav from '../components/nav'
 
-export default function trabajo() {
+export default function Home() {
   return (
-    <>
-      <h1>Trabajo</h1>
-      <Link href="/">
-        <a>Back home</a>
-      </Link>
-    </>
+    <Layout>
+      <Head>
+        <title>Barba con Bigote | Cerveza</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Nav></Nav>
+      
+      <main >
+        <h1 >
+          Trabajo
+        </h1>
+
+      </main>
+    </Layout>
   )
 }
