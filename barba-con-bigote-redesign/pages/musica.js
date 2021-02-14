@@ -12,8 +12,8 @@ export default function Home() {
 
       <Nav></Nav>
       
-      <main >
-        <h1 >
+      <main>
+        <h1>
           Musica
         </h1>
 
