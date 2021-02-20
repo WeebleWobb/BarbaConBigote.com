@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Nav from '../components/nav'
+import Content from '../components/content'
 
 export default function Home() {
   return (
@@ -12,12 +13,12 @@ export default function Home() {
 
       <Nav></Nav>
       
-      <main>
+      <Content>
         <h1>
           Musica
         </h1>
 
-      </main>
+      </Content>
     </Layout>
   )
 }
