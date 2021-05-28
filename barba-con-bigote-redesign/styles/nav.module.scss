@@ -13,10 +13,10 @@
     border-right: 4px solid $brown;
     border-top: none;
     flex-direction: column;
-    flex-basis: 4.722%;
     justify-content: space-between;
     order: 0;
     padding: 3rem 1rem 1rem;
+    max-width: 80px;
   }
 
   &__pages, &__social {
@@ -42,7 +42,7 @@
     position: relative;
 
     @include media(sm) {
-      margin: .5rem 2rem; 
+      margin: .5rem 1.75rem; 
       transition: background-color 250ms ease-in;
     }
     @include media(md) {
