@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Nav from '../components/nav'
-import Content from '../components/content'
+import Container from '../components/container'
 
 export default function Home() {
   return (
@@ -13,12 +13,12 @@ export default function Home() {
 
       <Nav></Nav>
       
-      <Content>
+      <Container>
         <h1>
           Barba con Bigote Redesign
         </h1>
 
-      </Content>
+      </Container>
     </Layout>
   )
 }
