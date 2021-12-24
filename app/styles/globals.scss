@@ -1,3 +1,9 @@
+// Tailwind directives for Tailwind-css support
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Custom Sass imports
 @import "./utils/colors";
 
 html,
