@@ -1,50 +1,36 @@
 # BarbaConBigote
-Portfolio website redesign: Utilizing Gulp, Sass, and NPM, and WordPress CMS
+Portfolio website redesign: Utilzing [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Release Notes
-### v1.4.2 - 10.26.18
-**Aspot**
-* Accessibility: Text shadow removal, increase readability and legability
+## Getting Started
 
-### v1.4.1 - 09.28.18
-**Navigation**
-* Navigation restructure. Includes: Casestudies and Social links
-* Restructured header for better responsiveness accross device widths
-* Changed hamburger to combo nav to better UX
+First, run the development server:
 
-### v1.3.1 - 08.23.18
-**Global**
-* Head Meta data updates
-* Case study call-to-action revisions
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-**Home**
-* Flex relative height fix
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**Work**
-* Push Start case study template dev
-* Case study template revisions
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-### v1.3 - 08.23.18
-**Case Studies**
-* Revised case studies section. Now includes new case studies from UX/UI other works. 
-* Removed UX/UI from other works.
-* A-spot rework. Includes new case studies.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-### v1.2 - 08.10.18
-**Front Page**
-* A-spot Redesign. Redesigned layout for work carousel.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-### v1.1 - 08.01.18
-**Front Page**
-* Update to homepage work carousel. Exludes case studies and only shows other work.
+## Learn More
 
-**Git Hub API**
-* Update to GitHub API Get request on Other Works section. Only pulls public repos and not private, even when 'Show All Repos' is clicked.
+To learn more about Next.js, take a look at the following resources:
 
-**Work Page**
-* Removed case studies and replaced with request form.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**Custom Console Message**
-* Added a custom console message in inspector.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-### v1.0 Official Launch - 06.06.18
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
