@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Nav from '../components/nav'
-import Content from '../components/content'
+import Content from '../components/container'
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       
       <Content>
         <h1>
-          Trabajo
+          Musica
         </h1>
 
       </Content>
