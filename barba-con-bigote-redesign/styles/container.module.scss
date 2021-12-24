@@ -1,0 +1,29 @@
+@import "colors";
+
+.main-container {
+  background-color: $red;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  padding: 2rem 4.5rem 2.5rem;
+
+  &--behance {
+    background-color: $behance-white;
+  }
+
+  &--dribbble {
+    background-color: $dribbble-pink;
+  }
+
+  &--github {
+    background-color: $github-white;
+  }
+
+  &--cerveza {
+    background-color: $cerveza-crema;
+  }
+
+  &--spotify {
+    background-color: $spotify-black;
+  }
+}
