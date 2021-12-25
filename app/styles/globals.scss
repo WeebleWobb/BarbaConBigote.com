@@ -1,16 +1,17 @@
-// Tailwind directives for Tailwind-css support
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // Custom Sass imports
-@import "./utils/colors";
+@import './utils/colors';
+
+// Tailwind Imports
+@import './tailwind/base.css';
+@import './tailwind/components.css';
+@import './tailwind/utilities.css';
+
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Signika Negative', Helvetica Neue, sans-serif;
+  font-family: 'Signika Negative', 'Helvetica Neue', sans-serif;
     font-size: 16px;
 }
 
