@@ -14,7 +14,7 @@ export default function Home() {
       <Nav></Nav>
       
       <Container>
-        <h1>
+        <h1 className='text-3xl'>
           Barba con Bigote Redesign
         </h1>
 
