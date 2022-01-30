@@ -1,0 +1,34 @@
+.bg {
+
+  &-red {
+    background-color: $red;
+  }
+
+  &-behance {
+    background-color: $behance-white;
+  }
+
+  &-dribbble {
+    background-color: $dribbble-pink;
+  }
+
+  &-github {
+    background-color: $github-white;
+  }
+
+  &-cerveza {
+    background-color: $cerveza-crema;
+  }
+
+  &-spotify {
+    background-color: $spotify-black;
+  }
+
+  &-cerveza {
+    background-color: $cerveza-crema;
+  }
+
+  &-musica {
+    background-color: $spotify-black;
+  }
+}
