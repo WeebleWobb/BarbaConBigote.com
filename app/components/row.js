@@ -1,10 +1,10 @@
-import styles from '../styles/components/row.module.scss'
-
-
-export default function Row({ children }) {
+export default function Row({ 
+  children,
+  className = ''
+ }) {
   return (
     <>
-      <div className = 'flex flex-row'>
+      <div className={`flex flex-row ${className}`}>
         {children}
       </div>
     </>

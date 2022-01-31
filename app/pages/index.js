@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Nav from '../components/nav'
 import Container from '../components/container'
 import Row from '../components/row'
+import Column from '../components/column'
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <Nav></Nav>
       
       <Container>
-      <Row>
+        <Row>
           <svg xmlns="http://www.w3.org/2000/svg" width="136" height="69" viewBox="0 0 136 69">
             <g id="Logo" transform="translate(-130.272 -180.728)">
               <path id="Path_1" data-name="Path 1" d="M267.163,199.12c0-7.067-3.262-18.392-15.221-18.392-14.793,0-10.509,11.959-10.509,11.959,0-3.624,6.07-3.491,6.07,1.087,0,2.537-2.264,5.164-9.151,5.164s-13.5-9.151-23.193-9.151c-14.1,0-16.147,5.641-16.442,7.486-.294-1.845-2.346-7.486-16.441-7.486-9.694,0-16.308,9.151-23.193,9.151s-9.151-2.627-9.151-5.164c0-4.578,6.07-4.711,6.07-1.087,0,0,4.284-11.959-10.509-11.959-11.96,0-15.222,11.325-15.222,18.392s7.067,10.147,7.067,15.493-2.265,2.9-2.265,16.308,23.1,19.3,32.073,19.3c8.937,0,27.406-4.228,31.571-8.74,4.165,4.512,22.634,8.74,31.572,8.74,8.97,0,32.073-5.889,32.073-19.3s-2.265-10.963-2.265-16.308S267.163,206.186,267.163,199.12Z" fill="#3f2016"/>
@@ -300,13 +301,25 @@ export default function Home() {
             </g>
           </svg>
         </Row>
-        <Row>
-          <h1>
-            Barba con Bigote Redesign
-          </h1>
+        <Row className='basis-full items-center'>
+          <Column className='pr-3'>
+            <h1 className='font-bold text-grey text-6xl mb-2'>
+              Barba con Bigote
+            </h1>
+            <h2 className='font-semibold text-grey text-3xl mb-6'>
+              (Beard and Mustache)
+            </h2>
+            <h4 className='font-semibold text-brown text-2xl mb-2'>
+              UI Designer at <a href="https://aweber.com" target="_blank" className='text-orange underline'>AWeber</a>
+            </h4>
+            <p className='mb-2'>Hola, I’m Juan D. Bolaños and I’m passionate about Human-Centric Design and Experiences. As a UI Designer I strive to utilize cognitive and social behaviors to better understand the human mind, its functions, and it’s affects in a given experience. </p>
+            <p>My process is deeply rooted in empathy, research, and the user, allowing for objective understandings which helps design experiences that both support and enhance the user’s daily lives.</p>
+          </Column>
+          <Column className='pl-3'>
+            <p>Hola, I’m Juan D. Bolaños and I’m passionate about Human-Centric Design and Experiences. As a UI Designer I strive to utilize cognitive and social behaviors to better understand the human mind, its functions, and it’s affects in a given experience. </p>
+            <p>My process is deeply rooted in empathy, research, and the user, allowing for objective understandings which helps design experiences that both support and enhance the user’s daily lives.</p>
+          </Column>
         </Row>
-        
-
       </Container>
     </Layout>
   )
