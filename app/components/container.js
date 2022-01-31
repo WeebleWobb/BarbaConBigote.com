@@ -15,7 +15,7 @@ export default function Container({ children }) {
 
   return (
     <>
-      <main className={`bg-${pageColor} flex flex-row basis-full content-between pb-10 pt-8 px-16`}>
+      <main className={`bg-${pageColor} flex flex-col basis-full content-between pb-10 pt-8 px-16`}>
         {children}
       </main>
     </>
