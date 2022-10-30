@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Nav from '../components/nav'
-import Container from '../components/container'
-import Row from '../components/row'
-import Column from '../components/column'
+import Container from '../components/grid/container'
+import Row from '../components/grid/row'
+import Column from '../components/grid/column'
 
 export default function Home() {
   return (
@@ -316,8 +316,7 @@ export default function Home() {
             <p>My process is deeply rooted in empathy, research, and the user, allowing for objective understandings which helps design experiences that both support and enhance the user’s daily lives.</p>
           </Column>
           <Column className='pl-3'>
-            <p>Hola, I’m Juan D. Bolaños and I’m passionate about Human-Centric Design and Experiences. As a UI Designer I strive to utilize cognitive and social behaviors to better understand the human mind, its functions, and it’s affects in a given experience. </p>
-            <p>My process is deeply rooted in empathy, research, and the user, allowing for objective understandings which helps design experiences that both support and enhance the user’s daily lives.</p>
+            <img src="https://via.placeholder.com/1600x1200" alt="Home image"/>
           </Column>
         </Row>
       </Container>

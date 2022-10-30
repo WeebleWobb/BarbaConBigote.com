@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Nav from '../components/nav'
-import Content from '../components/container'
+import Content from '../components/grid/container'
 
 export default function Home() {
   return (
