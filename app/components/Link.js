@@ -1,14 +1,20 @@
+import clsx from 'clsx';
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-export default ({ href, children }) => {
+export default ({ href, children}) => {
   const router = useRouter();
   
-  let className = children.props.className || ''
-  if (router.pathname === href) {
-    className = `page--selected`
-  }
+  const isActive = router.pathname === href
+  const className = clsx('block rounded-md w-10', isActive && 'bg-orange');
 
-  return <Link href={href}>{React.cloneElement(children, { className })}</Link>
+  return(
+    <Link 
+      href={href} 
+      className={className}
+    >
+      {React.cloneElement(children, {className})}
+    </Link>
+  );
 }
