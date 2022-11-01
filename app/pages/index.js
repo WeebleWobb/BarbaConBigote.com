@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import Nav from '../components/nav'
+import Nav from '../components/navigation/nav'
 import Container from '../components/grid/container'
 import Row from '../components/grid/row'
 import Column from '../components/grid/column'
