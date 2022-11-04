@@ -1,13 +1,10 @@
-// Custom Sass imports
-@import './utils/colors';
-
-// Layout
-@import './layout/background';
-
 // Tailwind Imports
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Custom Sass imports
+@import './utils/colors';
 
 
 html,

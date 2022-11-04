@@ -1,23 +1,48 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",    
-    "./components/**/*.{js,ts,jsx,tsx}"
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     colors: {
+      'behance' : {
+        'black': '#191919',
+        'blue': '#0057FF',
+        'white': '#F9F9F9',
+      },
       'brown': '#3F2016',
+      'cerveza' : {
+        'crema': '#F8EFE7',
+        'negro': '#2C2D48',
+      },
+      'dribble': {
+        'black': '#0D0C22',
+        'blue': '#00B6E3',
+        'pink': '#EA4C89',
+      },
+      'github': {
+        'black': '#0E0D0D',
+        'purple': '#6F42C1',
+        'white': '#F4F7FB',
+      },
       'grey': '#EFEFEF',
       'orange': '#F79425',
       'red': '#D54935',
-      'white': '#ffffff'
-    },
-    fontFamily: {
-      sans: ['Signika Negative', 'Helvetica Neue', 'sans-serif']
+      'spotify': {
+        'black': '#191414',
+        'green': '#22D760'
+      },
+      'white': '#ffffff',
     },
     extend: {
       fontSize: {
         '3xl': '2rem'
       },
+    },
+    fontFamily: {
+      sans: ['Signika Negative', 'Helvetica Neue', 'sans-serif']
     },
   },
   plugins: [],
