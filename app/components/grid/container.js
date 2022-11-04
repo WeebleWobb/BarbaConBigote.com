@@ -1,21 +1,27 @@
 import { useRouter } from 'next/router'
+import clsx from 'clsx';
 
 export default function Container({ children }) {
 
   const router = useRouter();
-  let pageColor = 'red';
+  let  pageColor;
 
   if (router.pathname === '/trabajo') {
-    pageColor = 'dribbble';
-  } if (router .pathname === '/cerveza') {
-    pageColor = 'cerveza';
-  } if (router .pathname === '/musica') {
-    pageColor = 'musica';
+    pageColor = 'bg-dribble-pink';
+  } else if (router .pathname === '/cerveza') {
+    pageColor = 'bg-cerveza-crema';
+  } else if (router .pathname === '/musica') {
+    pageColor = 'bg-spotify-black';
+  } else {
+    pageColor = 'bg-red';
   }
 
   return (
     <>
-      <main className={`bg-${pageColor} flex flex-col basis-full content-between pb-10 pt-8 px-16`}>
+      <main className={clsx(
+        `${pageColor}`,
+        'flex flex-col basis-full content-between pb-10 pt-8 px-16'
+      )}>
         {children}
       </main>
     </>
