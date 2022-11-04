@@ -20,8 +20,8 @@ export default function Home() {
         <Row>
           <Logo />
         </Row>
-        <Row className='basis-full items-center'>
-          <Column className='pr-3'>
+        <Row alignLg='middle' fullbasis>
+          <Column className='pr-3' lg={6}>
             <h1 className='font-bold text-grey text-6xl mb-2'>
               Barba con Bigote
             </h1>
@@ -34,7 +34,7 @@ export default function Home() {
             <p className='mb-2'>Hola, I’m Juan D. Bolaños and I’m passionate about Human-Centric Design and Experiences. As a UI Designer I strive to utilize cognitive and social behaviors to better understand the human mind, its functions, and it’s affects in a given experience. </p>
             <p>My process is deeply rooted in empathy, research, and the user, allowing for objective understandings which helps design experiences that both support and enhance the user’s daily lives.</p>
           </Column>
-          <Column className='pl-3'>
+          <Column className='pl-3' lg={6}>
             <img src="https://via.placeholder.com/1600x1200" alt="Home image"/>
           </Column>
         </Row>
