@@ -12,7 +12,7 @@
     "next": "^13.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.56.0",
+    "sass": "^1.58.1",
     "tailwind-merge": "^1.7.0"
   },
   "devDependencies": {
