@@ -21,7 +21,7 @@ const Container = ({ className, children }) => {
   const classes = twMerge(
     clsx(
       `${pageColor}`,
-      'flex flex-col basis-full pb-10 pt-8 px-16',
+      'flex flex-col basis-full overflow-hidden',
     ),
     className
   );
@@ -29,7 +29,9 @@ const Container = ({ className, children }) => {
   return (
     <>
       <main className={classes}>
-        {children}
+        <div className='pb-10 pt-8 px-16'>
+          {children}
+        </div>
       </main>
     </>
   )
