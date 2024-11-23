@@ -6,8 +6,9 @@
 
 ### Changed
 - Reworks README to consolidate Project and Next.js info
+- Refactored project to use Next.js 14 and App Router structure
 
-## 1.4.2 - 2018.10.26
+## [1.4.2] - 2018.10.26
 ### Fixed
 Aspot
 - Accessibility: Text shadow removal, increase readability and legability
