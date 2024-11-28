@@ -1,17 +1,15 @@
-import type { Metadata } from 'next'
 import { Signika_Negative } from 'next/font/google'
 import './styles/globals.scss'
 import Nav from '@/components/navigation/nav'
+import { defaultMetadata } from '@/config/metadata'
 
 const signika = Signika_Negative({ 
   subsets: ['latin'],
-  weight: ['400', '600', '700']
+  weight: ['400', '600', '700'],
+  display: 'swap'
 })
 
-export const metadata: Metadata = {
-  title: 'Juan D. Bolaños | Barba con Bigote',
-  description: 'UI Designer portfolio and personal website',
-}
+export const metadata = defaultMetadata
 
 export default function RootLayout({
   children,

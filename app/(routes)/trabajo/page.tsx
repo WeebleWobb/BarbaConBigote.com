@@ -1,9 +1,24 @@
-import Container from '@/components/grid/container'
+import Content from '@/components/grid/container'
+import { Metadata } from 'next';
 
-export default function Trabajo() {
+export const metadata: Metadata = {
+  title: 'Trabajo',
+  description: 'A collection of case studies, component specs, and projects that showcase my more than a decades worth of experience in the design industry.',
+  openGraph: {
+    title: 'Trabajo',
+    description: 'A collection of case studies, component specs, and projects that showcase my more than a decades worth of experience in the design industry.'
+  }
+}
+
+const trabajo = () => {
   return (
-    <Container className="">
-      <h1>Trabajo</h1>
-    </Container>
+    <Content>
+      <h1>
+        Trabajo
+      </h1>
+
+    </Content>
   )
-} 
+}
+
+export default trabajo;
