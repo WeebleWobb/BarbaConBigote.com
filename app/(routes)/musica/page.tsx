@@ -1,16 +1,24 @@
-import Head from 'next/head'
-import Layout from '@/components/layout'
 import Content from '@/components/grid/container'
+import { Metadata } from 'next'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Musica',
+  description: 'The music I listen to when I work, relax, and unplug.',
+  openGraph: {
+    title: 'Musica',
+    description: 'The music I listen to when I work, relax, and unplug.'
+  }
+}
+
+const musica = () => {
   return (
-    <Layout>     
-      <Content>
-        <h1>
-          Musica
-        </h1>
+    <Content>
+      <h1>
+        Musica
+      </h1>
 
-      </Content>
-    </Layout>
+    </Content>
   )
 }
+
+export default musica;

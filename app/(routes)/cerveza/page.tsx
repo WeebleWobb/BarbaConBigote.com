@@ -1,16 +1,23 @@
-import Head from 'next/head'
-import Layout from '@/components/layout'
 import Content from '@/components/grid/container'
+import { Metadata } from 'next'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Cerveza',
+  description: 'A small personal project that tracks the uniqe and enjoyable beers I have tasted, utilizing Untappd API.',
+  openGraph: {
+    title: 'Cerveza',
+    description: 'A small personal project that tracks the uniqe and enjoyable beers I have tasted, utilizing Untappd API.'
+  }
+}
+
+const cerveza = () => {
   return (
-    <Layout>    
-      <Content>
-        <h1>
-          Cerveza
-        </h1>
-
-      </Content>
-    </Layout>
+        <Content>
+          <h1>
+            Cerveza
+          </h1>
+        </Content>
   )
 }
+
+export default cerveza;
