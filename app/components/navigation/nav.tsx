@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import Home from '../icons/home'
 import Trabajo from '../icons/trabajo'
-import Cerveza from '../icons/cerveza'
 import Musica from '../icons/musica'
 import NavItem from './nav-item'
+import Logo from '@/components/icons/logo'
 
 export default function Nav() {
   const pathname = usePathname()
@@ -17,25 +17,19 @@ export default function Nav() {
       id: 1,
       icon: <Home />,
       link: '/',
-      tooltip: 'Casa'
+      text: 'About'
     },
     {
       id: 2,
       icon: <Trabajo />,
       link: '/trabajo',
-      tooltip: 'Trabajo'
+      text: 'Case Studies'
     },
     {
       id: 3,
-      icon: <Cerveza />,
-      link: '/cerveza',
-      tooltip: 'Cerveza',
-    },
-    {
-      id: 4,
       icon: <Musica />,
       link: '/musica',
-      tooltip: 'Musica',
+      text: 'Music'
     },
   ]
 
@@ -45,21 +39,54 @@ export default function Nav() {
       icon: <Image src="/svgs/instagram.svg" width={18} height={18} alt="Instagram"/>,
       link: 'https://www.instagram.com/weeblewobb/',
     },
-    // ... other social links
+    {
+      id: 6,
+      icon: <Image src="/svgs/linkedin.svg" width={18} height={18} alt="LinkedIn"/>,
+      link: 'https://www.linkedin.com/in/bolanosjd/',
+    },
+    {
+      id: 7,
+      icon: <Image src="/svgs/github.svg" width={18} height={18} alt="GitHub"/>,
+      link: 'https://github.com/weeblewobb',
+    },
+    {
+      id: 8,
+      icon: <Image src="/svgs/dribbble.svg" width={18} height={18} alt="Dribbble"/>,
+      link: 'https://dribbble.com/weeblewobb',
+    },
   ]
 
   return (
-    <nav className='bg-grey border-brown border-solid border-t-4 flex flex-row justify-center order-1 md:border-t-0 md:border-r-4 md:flex-col md:justify-between md:order-none md:px-4 md:pt-10 md:pb-3 md:max-w-7xl'>
-      <ul className='flex list-none m-0 p-0 md:flex-col'>
-        {navLinks.map(page => (
-          <NavItem 
-            key={page.id}
-            page={page}
-            isActive={pathname === page.link}
-          />
+    <nav 
+      className='bg-grey border-brown border-solid border-y-4 px-2 py-3 w-full md:flex md:items-center md:justify-between sm:px-12'
+      aria-label="Main navigation"
+    >
+      <div className='flex items-center gap-x-6'>
+        <div className='hidden sm:block w-28'>
+          <Logo />
+        </div>
+        <ul 
+          className='flex items-center justify-between flex-auto list-none px-4 md:px-0 space-x-3'
+          role="menubar"
+        >
+          {navLinks.map(page => (
+            <NavItem 
+              key={page.id}
+              page={page}
+              isActive={pathname === page.link}
+            />
+          ))}
+        </ul>
+      </div>
+      <ul className='hidden list-none space-x-4 md:flex'>
+        {socialLinks.map(social => (
+          <li key={social.id}>
+            <Link href={social.link} target='_blank' rel='noopener noreferrer'>
+              {social.icon}
+            </Link>
+          </li>
         ))}
       </ul>
-      {/* ... social links section */}
     </nav>
   )
 } 

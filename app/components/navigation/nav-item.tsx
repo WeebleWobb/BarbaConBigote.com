@@ -6,29 +6,27 @@ type NavItemProps = {
     id: number;
     link: string;
     icon: ReactNode;
-    tooltip: string;
+    text: string;
   };
   isActive: boolean;
 }
 
 export default function NavItem({ page, isActive }: NavItemProps) {
   return (
-    <li className='flex flex-col group items-center my-1 mx-5 relative rounded-md w-full sm:mx-7 md:block md:duration-200 md:ease-in md:transition-colors md:mt-0 md:mx-0 md:mb-6 md:hover:bg-orange'>
+    <li className={`px-4 py-1 rounded-lg md:block md:duration-150 md:ease-in md:transition-colors md:hover:bg-orange sm:pl-2 sm:pr-3 ${isActive ? 'bg-orange' : ''}`}>
       <Link 
         href={page.link}
-        className={`block rounded-md w-10 ${isActive ? 'bg-orange' : ''}`}
+        className='flex flex-col items-center sm:flex-row sm:space-x-1'
         aria-current={isActive ? 'page' : undefined}
-        aria-label={page.tooltip}
+        aria-label={page.text}
       >
-        {page.icon}
+        <span className='w-8 h-8'>
+          {page.icon}
+        </span>
+        <span className='font-semibold text-lg text-brown text-center md:mt-0.5'>
+          {page.text}
+        </span>
       </Link>
-      <span 
-        className='block font-semibold font-sm py-0.5 px-1.5 rounded-md text-brown transition md:absolute md:bg-brown md:duration-400 md:ease-[cubic-bezier(0.16, 1, 0.3, 1)] md:font-normal md:opacity-0 md:rounded-r-lg md:rounded-l-full md:text-white md:top-1.5 md:translate-x-4 md:group-hover:opacity-100 md:group-hover:translate-x-12'
-        role="tooltip" 
-        id={`tooltip-${page.id}`}
-      >
-        {page.tooltip}
-      </span>
     </li>
   )
 } 
