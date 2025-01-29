@@ -5,11 +5,11 @@ import Logo from '@/components/icons/logo'
 
 const home = () => (
       <Container>
-        <Row>
-          <Logo />
-        </Row>
         <Row alignLg='middle' fullbasis>
           <Column className='pr-3' lg={6}>
+            <div className='w-32 mb-4 sm:hidden'>
+              <Logo />
+            </div>
             <h1 className='font-bold text-grey text-6xl mb-2'>
               Barba con Bigote
             </h1>

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={signika.className}>
-        <div className='flex flex-col md:flex-row justify-between md:justify-start h-screen'>
+        <div className='flex flex-col justify-between md:justify-start h-screen'>
           <Nav />
           {children}
         </div>
