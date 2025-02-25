@@ -23,7 +23,7 @@ export default function NavItem({ page, isActive }: NavItemProps) {
         <span className='w-8 h-8'>
           {page.icon}
         </span>
-        <span className='font-semibold text-lg text-brown text-center md:mt-0.5'>
+        <span className='font-orelega text-xl text-brown text-center md:mt-0.5'>
           {page.text}
         </span>
       </Link>
