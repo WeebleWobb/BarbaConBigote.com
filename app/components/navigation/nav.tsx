@@ -61,7 +61,7 @@ export default function Nav() {
       className='bg-grey border-brown border-solid border-y-4 px-2 py-3 w-full md:flex md:items-center md:justify-between sm:px-12'
       aria-label="Main navigation"
     >
-      <div className='flex items-center gap-x-6'>
+      <div className='flex items-center gap-x-8'>
         <div className='hidden sm:block w-28'>
           <Logo />
         </div>

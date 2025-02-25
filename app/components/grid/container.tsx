@@ -29,7 +29,7 @@ const Container = ({ className = '', children }: ContainerProps) => {
   const classes = twMerge(
     clsx(
       getPageColor(),
-      'basis-full flex items-start overflow-hidden sm:items-center',
+      'basis-full flex items-start overflow-hidden lg:items-center',
     ),
     className
   )
