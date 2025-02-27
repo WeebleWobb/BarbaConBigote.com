@@ -78,7 +78,7 @@ export default function Nav() {
           ))}
         </ul>
       </div>
-      <ul className='hidden list-none space-x-4 md:flex'>
+      <ul className='hidden list-none space-x-4 md:flex md:items-center'>
         {socialLinks.map(social => (
           <li key={social.id}>
             <Link href={social.link} target='_blank' rel='noopener noreferrer'>
