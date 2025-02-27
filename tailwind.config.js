@@ -41,7 +41,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Signika Negative', 'Helvetica Neue', 'sans-serif']
+      sans: ['var(--font-signika)', 'Helvetica Neue', 'sans-serif'],
+      orelega: ['var(--font-orelega)', 'Helvetica Neue', 'sans-serif'],
     },
   },
   plugins: [],

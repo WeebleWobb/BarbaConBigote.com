@@ -4,7 +4,6 @@ import clsx from 'clsx'
 
 type JustifyType = 'start' | 'end' | 'center' | 'around' | 'between'
 type AlignType = 'top' | 'middle' | 'bottom'
-type GutterType = 'none' | 'double'
 type BreakpointType = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 type RowProps = {
@@ -13,7 +12,6 @@ type RowProps = {
   fullbasis?: boolean;
   nowrap?: boolean;
   reverse?: boolean;
-  gutter?: GutterType;
   justifyXs?: JustifyType;
   justifySm?: JustifyType;
   justifyMd?: JustifyType;
@@ -101,7 +99,6 @@ const Row = ({
   fullbasis = false,
   nowrap = false,
   reverse = false,
-  gutter,
   justifyXs,
   justifySm,
   justifyMd,
@@ -119,8 +116,6 @@ const Row = ({
       fullbasis ? 'basis-full' : 'basis-auto',
       reverse ? 'flex-row-reverse' : 'flex-row',
       nowrap ? 'flex-nowrap' : 'flex-wrap',
-      gutter === 'double' && '-ml-4 -mr-4',
-      gutter === 'none' ? '' : '-mr-2 -ml-2',
       justifyXs && justifyMap.xs[justifyXs],
       justifySm && justifyMap.sm[justifySm],
       justifyMd && justifyMap.md[justifyMd],
